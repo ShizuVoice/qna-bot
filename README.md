@@ -1,3 +1,6 @@
 # QnA Bot
-A bot that is used for online class on Discord.
-Bot is in very early development build at the moment.
+A Discord bot that is purposely used for online class as a simple online "test paper" and a moderation bot.
+
+Bot is still in development at this moment.
+
+*Readme will be available soon...*
