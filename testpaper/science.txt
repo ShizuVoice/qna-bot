@@ -1,0 +1,26 @@
+>>> **This will be example on the content on this file and the folder**
+Akihabara High School
+Science
+
+Direction: Choose your answer on the list and send it to <User>.
+
+1. This is a test.
+a. Test   b. Test   c. Test   d. Test
+
+2. This will be a test
+a. Test   b. Test   c. Test   d. Test
+
+3. This is gonna show as a template for the bot.
+a. Test   b. Test   c. Test   d. Test
+
+4. This will follow to until the last question but may depend how big is the question paper since
+there is a character limitation inside Discord that can't be prevented.
+a. Test   b. Test   c. Test   d. Test
+
+5. ...
+a...
+
+6...
+a...
+
+and so forth...
