@@ -1,18 +1,10 @@
-# QnA Bot Version 0.8.2 Beta by SilentVOEZ#2523
+# QnA Bot Version 0.8.3 Beta by SilentVOEZ#2523
 
-#import logging
 import discord
 import os
 
 import asyncio
 from discord.ext import commands
-
-#logging.basicConfig(level=logging.INFO)
-#logger = logging.getLogger('discord')
-#logger.setLevel(logging.INFO)
-#handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-#handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-#logger.addHandler(handler)
 
 TOKEN = open("./token.txt","r").read()
 PREFIX = open("./prefix.txt","r").read()
