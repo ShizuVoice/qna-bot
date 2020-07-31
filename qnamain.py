@@ -1,4 +1,4 @@
-# QnA Bot Version 0.8.3 Beta by SilentVOEZ#2523
+# QnA Bot Version 0.8.4 Beta by SilentVOEZ#2523
 
 import discord
 import os
@@ -26,21 +26,19 @@ async def on_ready():
     activity = discord.Game(name="q!help, Beta release", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
-# Status Cycle
+# Status Cycle (TY DaijobuDes)
 @bot.command()
-async def statusonline(ctx):
+async def status(ctx, status: str):
+    status.lower()
     activity = discord.Game(name="q!help, Beta release", type=3)
-    await bot.change_presence(status=discord.Status.online, activity=activity)
-
-@bot.command()
-async def statusidle(ctx):
-    activity = discord.Game(name="q!help, Beta release", type=3)
-    await bot.change_presence(status=discord.Status.idle, activity=activity)
-
-@bot.command()
-async def statusdnd(ctx):
-    activity = discord.Game(name="q!help, Beta release", type=3)
-    await bot.change_presence(status=discord.Status.dnd, activity=activity)
+    if status == 'online':
+        await bot.change_presence(status=discord.Status.online, activity=activity)
+    elif status == 'idle':
+        await bot.change_presence(status=discord.Status.idle, activity=activity)
+    elif status == 'dnd' or status == 'donotdisturb':
+        await bot.change_presence(status=discord.Status.dnd, activity=activity)
+    else:
+        await ctx.send(f'"{status}" is not a valid argument.')
 
 #Code borrowed from DaijobuDes
 @bot.command()
