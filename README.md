@@ -85,5 +85,5 @@ If you want to add more user to use the owner-based command, it's the same like 
 
 And then save the text file.
 
-## Adding question paper to the bot
+## Using the bot as a test paper
 ***Soon***™
