@@ -35,7 +35,7 @@ If you did the optional step, now go to the "Bot" on the left panel and click th
 "Yes, do it!" and you have successfully created a bot!
 
 ## Inviting the bot to your server
-After you created the bot (and assume that you have server), head over to "OAuth2" on the left panel and you will now have to tick some boxes for the bot.
+After you created the bot (and you have created a server), head over to "OAuth2" on the left panel and you will now have to tick some boxes for the bot.
 
 Tick the `bot` box first on the Scopes area and then tick the following boxes below according to the bot's functions on Bot Permissions area.
 `Kick Members`, `Ban Members`, `View Channels`, `Send Messages`, `Manage Messages`, `Embed Links`, `Read Message History`, `Use External
@@ -58,6 +58,32 @@ After that, you just have to open `qnamain.py` and you a console window will app
 the root directory of `qna-bot` and then typing `py qnamain.py`.
 
 Once you get the "successfully connected" connected, everything is working.
+
+## Setting up additional things
+Since we have successfully run the program, we need to take some user ID from admins or mods to use some owner-based commands on the bot.
+
+If you navigate to the root folder of qna-bot you will see the `author.txt` file. If you open it, you will see a random number inside the
+text file which is 
+
+`170093603530473472`
+
+**Don't delete that number since that's my ID when you need an assistance from me.**
+
+To get the user ID from other members, open your Discord client and make sure you have "Developer Mode" enabled from the setting. You can
+look it up [here](https://imgur.com/a/2u9d0MF).
+
+If the "Developer Mode" is enabled, go back to your server and look up the name of that member you want to add on the member list or on the left side.
+Right click on their name and then click "Copy ID". Now you just have to paste on `author.txt` but I said that you must not delete my ID, here's how.
+
+Just add comma after my ID and then add space after the comma and paste the ID. Like this
+
+`170093603530473472, 1700xxxxxxx123456`
+
+If you want to add more user to use the owner-based command, it's the same like I said above which it looks like this.
+
+`170093603530473472, 17001700xxxxxxx123456, 240065xxxxxxx789012, 580293xxxxxxx654321`
+
+And then save the text file.
 
 ## Adding question paper to the bot
 ***Soon***™
