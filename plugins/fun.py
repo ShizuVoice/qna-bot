@@ -11,23 +11,6 @@ class Fun(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def loli(self, ctx):
-        responses = ['Moshi moshi FBI desu!',
-                    'All the lolis were out now so no loli for you.',
-                    'Guards are watching now.',
-                    'The NSA is watching you.',
-                    "They're sleeping, you can't wake them up.",
-                    '*sirens incoming*',
-                    'Pervert.',
-                    'Lolicon.',
-                    "I'll send you to jail.",
-                    'This is the police and it seems you are suspicious from your activity',
-                    'https://memegenerator.net/img/instances/73517979/tadaima-motherfucker.jpg',
-                    'https://media.tenor.com/images/1ec1659fd1cdaaf72a9a5fa566f842d6/tenor.gif',
-                    'https://media.tenor.com/images/523e65404d07340e5397c7b5e0d0929b/tenor.gif']
-        await ctx.send(f'{random.choice(responses)}')
-
-    @commands.command()
     async def rps(self, ctx):
         responses = ["It's a rock!",
                     "It's a paper!",

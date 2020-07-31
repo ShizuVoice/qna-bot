@@ -11,8 +11,6 @@ class Help(commands.Cog):
 
     @commands.command(pass_context=True)
     async def help(self, ctx):
-#        await ctx.send("I can't send you a love letter, uh-h I meant the documentation in private, please check if you're accepting DMs")
-#        await ctx.send("Please enable direct messaging if you turned it off. I can't send you the love lette-, I mean the documentation in private.")
         await ctx.send("Please enable direct messaging if you turned it off. I can't send you the help guide for this bot.")
         author = ctx.message.author
 
@@ -36,7 +34,6 @@ class Help(commands.Cog):
         embed.set_author(name='Fun')
         embed.add_field(name='rps', value='Play rock, paper, scissor!', inline=False)
         embed.add_field(name='eightball', value='Ask the eightball for question.', inline=False)
-        embed.add_field(name='loli', value='Show something cute, maybe.', inline=False)
         embed.add_field(name='haachama', value='Have some cooking tips from Akai Haato.', inline=False)
 
         await author.send(embed=embed)
@@ -46,8 +43,8 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='Testpaper')
-        embed.add_field(name='tphelp', value='Shows the testpaper help')
-        embed.add_field(name='testpaper', value='*In progress*', inline=False)
+        embed.add_field(name='tphelp', value='Shows the testpaper help.')
+        embed.add_field(name='testpaper', value='Sends the test question as Direct Message.', inline=False)
 
         await author.send(embed=embed)
 
@@ -59,10 +56,8 @@ class Help(commands.Cog):
         embed.add_field(name='kick', value='Kicks a member on the server.', inline=False)
         embed.add_field(name='ban', value='Bans a member on the server', inline=False)
         embed.add_field(name='purge', value='Clears messages with a certain amount.', inline=False)
-        embed.add_field(name='statusonline', value='Set the bot status to Online', inline=False)
-        embed.add_field(name='statusidle', value='Set the bot status to Idle', inline=False)
-        embed.add_field(name='statusdnd', value='Set the bot status to Do Not Disturb', inline=False)
-        embed.add_field(name='shutdown', value='Shuts down the bot outside the terminal.')
+        embed.add_field(name='status', value="Set the bot's online status.", inline=False)
+        embed.add_field(name='shutdown', value='Shuts down the bot outside the terminal.', inline=False)
 
         await author.send(embed=embed)
 

@@ -18,14 +18,14 @@ class General(commands.Cog):
     @commands.command()
     async def version(self, ctx):
         embed = discord.Embed(
-            colour = discord.Colour.red()
+            colour = discord.Colour.orange()
         )
 
         embed.set_author(name='QnA Bot')
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/712312095214927892/cb43c18459a8eda7fd37fadd0d59222f.png?size=256')
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.8.4 Beta')
+        embed.add_field(name='Version', value='0.9 Pre-release')
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -70,10 +70,6 @@ class General(commands.Cog):
         embed.add_field(name='Bot?', value=member.bot)
 
         await ctx.send(embed=embed)
-    
-    @commands.command()
-    async def die(self, ctx):
-        await ctx.send('https://tenor.com/view/dancing-coffin-coffin-dance-funeral-funny-farewell-gif-16737844')
 
 def setup(bot):
     bot.add_cog(General(bot))
