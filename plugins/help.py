@@ -34,6 +34,8 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='Fun')
+        embed.add_field(name='rps', value='Play rock, paper, scissor!', inline=False)
+        embed.add_field(name='eightball', value='Ask the eightball for question.', inline=False)
         embed.add_field(name='loli', value='Show something cute, maybe.', inline=False)
         embed.add_field(name='haachama', value='Have some cooking tips from Akai Haato.', inline=False)
 
@@ -60,6 +62,7 @@ class Help(commands.Cog):
         embed.add_field(name='statusonline', value='Set the bot status to Online', inline=False)
         embed.add_field(name='statusidle', value='Set the bot status to Idle', inline=False)
         embed.add_field(name='statusdnd', value='Set the bot status to Do Not Disturb', inline=False)
+        embed.add_field(name='shutdown', value='Shuts down the bot outside the terminal.')
 
         await author.send(embed=embed)
 

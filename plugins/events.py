@@ -16,6 +16,8 @@ class Events(commands.Cog):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CheckFailure):
             await ctx.send("You do not have permission to do that!")
+        if isinstance(error,commands.CommandInvokeError):
+            await ctx.send("Bot doesn't have permission to do certain action. Check other roles that may be overriding the bot's own role permission.")
 
         raise error
 

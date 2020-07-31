@@ -13,9 +13,7 @@ class General(commands.Cog):
 
     @commands.command()
     async def ping(self, ctx):
-        message = await ctx.send('POG!')
-        await message.edit(content='I mean PONG!')
-#        await ctx.send('I mean PONG!')
+        await ctx.send('Pong!')
     
     @commands.command()
     async def version(self, ctx):
@@ -27,12 +25,8 @@ class General(commands.Cog):
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/712312095214927892/cb43c18459a8eda7fd37fadd0d59222f.png?size=256')
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.8.2 Beta')
+        embed.add_field(name='Version', value='0.8.3 Beta')
         await ctx.send(embed=embed)
-
-    @commands.command()
-    async def invite(self, ctx):
-        await ctx.author.send("This feature is not available.")
 
     @commands.command()
     async def say(self, ctx, *, arg: commands.clean_content):
@@ -80,14 +74,6 @@ class General(commands.Cog):
     @commands.command()
     async def die(self, ctx):
         await ctx.send('https://tenor.com/view/dancing-coffin-coffin-dance-funeral-funny-farewell-gif-16737844')
-
-# Dedicated eror handling for this command
-    @say.error
-    async def say_error(self, ctx, error):
-        if isinstance(error, commands.CommandInvokeError):
-            await ctx.send("Bot doesn't have permission to delete a message. Check other roles that may be overriding the bot's own role permission.")
-
-        raise error
 
 def setup(bot):
     bot.add_cog(General(bot))
