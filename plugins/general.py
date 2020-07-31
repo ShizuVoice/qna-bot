@@ -25,7 +25,7 @@ class General(commands.Cog):
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/712312095214927892/cb43c18459a8eda7fd37fadd0d59222f.png?size=256')
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.8.3 Beta')
+        embed.add_field(name='Version', value='0.8.4 Beta')
         await ctx.send(embed=embed)
 
     @commands.command()

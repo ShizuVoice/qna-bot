@@ -9,6 +9,14 @@ class Events(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
+    async def on_disconnect(self):
+        print(f"{self.bot.user.name} got disconnected! Attempting to reconnect...")
+
+    @commands.Cog.listener()
+    async def on_connect(self):
+        print(f"{self.bot.user.name} successfully connected.")
+
+    @commands.Cog.listener()
     async def on_message(self, message):
         print(f"{message.author} said {message.content}")
 
