@@ -17,7 +17,8 @@ and extract it anywhere you like.
 
 **For Linux users**
 
-***Soon***™
+Most Linux distribution have `python3` installed. But if you are unsure, just type `apt-get install python3` with root privilege.
+And then install `discord.py` by typing `python3 -m pip install -U discord.py`.
 
 ## Creating and setting up the bot
 If you don't have Discord account yet, go to [Discord](https://discord.com) and create a new account. Also, you can download their client
@@ -51,11 +52,12 @@ token to use with the program.
 
 When you are in the Bot section, click "Copy" below the "Click to Reveal Token" and to go the root folder of qna-bot. When you are in the root
 folder of qna-bot, open `token.txt` and then clear the content of it and then paste the token and save it.
-Be warned that when someone saw your bot token, they can use your bot without your control! When in doubt, go to the Bot section of the
-[developers](https://discord.com/developers) page, click "Regenerate" and then "Copy" and then paste the token in the `token.txt`
+*Be warned that when someone saw your bot token, they can use your bot without your control! When in doubt, go to the Bot section of the
+[developers](https://discord.com/developers) page, click "Regenerate" and then "Copy" and then paste the token in the `token.txt`*
 
 After that, you just have to open `qnamain.py` and you a console window will appear. Or you can run it on Command Prompt by navigating to
-the root directory of `qna-bot` and then typing `py qnamain.py`.
+the root directory of `qna-bot` and then typing `py qnamain.py`. For Linux users, navigate to the root folder on terminal and execute it
+by typing `python3 qnamain.py`.
 
 Once you get the "successfully connected" message on the console, everything is working.
 
