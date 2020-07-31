@@ -53,10 +53,13 @@ class Help(commands.Cog):
             colour = discord.Colour.dark_red()
         )
 
-        embed.set_author(name='Moderation (Administrator only)')
+        embed.set_author(name='Moderation/Utility (Administrator/Owner only)')
         embed.add_field(name='kick', value='Kicks a member on the server.', inline=False)
         embed.add_field(name='ban', value='Bans a member on the server', inline=False)
         embed.add_field(name='purge', value='Clears messages with a certain amount.', inline=False)
+        embed.add_field(name='statusonline', value='Set the bot status to Online', inline=False)
+        embed.add_field(name='statusidle', value='Set the bot status to Idle', inline=False)
+        embed.add_field(name='statusdnd', value='Set the bot status to Do Not Disturb', inline=False)
 
         await author.send(embed=embed)
 

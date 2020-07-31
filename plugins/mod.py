@@ -4,6 +4,7 @@
 import discord
 from discord.ext import commands
 
+
 class Mod(commands.Cog):
 
     def __init__(self, bot):
@@ -28,7 +29,7 @@ class Mod(commands.Cog):
     async def purge(self, ctx, amount: int):
         await ctx.channel.purge(limit=amount + 1)
 
-### Error Handling
+# Dedicated error handling for this commands
 
     @kick.error
     async def kick_error(self, ctx, error):
