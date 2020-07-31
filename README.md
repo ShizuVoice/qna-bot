@@ -69,8 +69,8 @@ text file which is
 
 **Don't delete that number since that's my ID when you need an assistance from me.**
 
-To get the user ID from other members, open your Discord client and make sure you have "Developer Mode" enabled from the setting. You can
-look it up [here](https://imgur.com/a/2u9d0MF).
+To get the user ID from other members, make sure the bot is closed at the moment. Open your Discord client and make sure you have "Developer Mode"
+enabled from the setting. You can look it up [here](https://imgur.com/a/2u9d0MF).
 
 If the "Developer Mode" is enabled, go back to your server and look up the name of that member you want to add on the member list or on the left side.
 Right click on their name and then click "Copy ID". Now you just have to paste on `author.txt` but I said that you must not delete my ID, here's how.
