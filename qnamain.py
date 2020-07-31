@@ -1,4 +1,4 @@
-# QnA Bot Version 0.8.4 Beta by SilentVOEZ#2523
+# QnA Bot Version 0.9 Pre-release by SilentVOEZ#2523
 
 import discord
 import os
@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix=PREFIX)
 bot.remove_command('help')
 
 async def is_owner(ctx):
-    owner = open("author.txt","r").read()
+    owner = open("./author.txt","r").read()
     return ctx.author.id == owner
 
 @bot.event
@@ -23,14 +23,15 @@ async def on_ready():
     print(f'----------------')
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
-    activity = discord.Game(name="q!help, Beta release", type=3)
+    activity = discord.Game(name="q!help, Pre-release", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
 # Status Cycle (TY DaijobuDes)
 @bot.command()
+@commands.is_owner()
 async def status(ctx, status: str):
     status.lower()
-    activity = discord.Game(name="q!help, Beta release", type=3)
+    activity = discord.Game(name="q!help, Pre-release", type=3)
     if status == 'online':
         await bot.change_presence(status=discord.Status.online, activity=activity)
     elif status == 'idle':
