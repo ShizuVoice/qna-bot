@@ -57,7 +57,7 @@ Be warned that when someone saw your bot token, they can use your bot without yo
 After that, you just have to open `qnamain.py` and you a console window will appear. Or you can run it on Command Prompt by navigating to
 the root directory of `qna-bot` and then typing `py qnamain.py`.
 
-Once you get the "successfully connected" connected, everything is working.
+Once you get the "successfully connected" message on the console, everything is working.
 
 ## Setting up additional things
 Since we have successfully run the program, we need to take some user ID from admins or mods to use some owner-based commands on the bot.
