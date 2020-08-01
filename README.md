@@ -1,9 +1,20 @@
 # QnA Bot
-A Discord bot that is purposely used for online class as a simple online "test paper" and a moderation bot.
+> A Discord bot that is purposely used for online class as a simple online "test paper" and a moderation bot.
+> Bot is still in development at this moment.
 
-Bot is still in development at this moment.
+- [QnA Bot](#qna-bot)
+  * [Setting it up](#setting-it-up)
+    + [Preparation](#preparation)
+    + [Creating and setting up the bot](#creating-and-setting-up-the-bot)
+    + [Inviting the bot to your server](#inviting-the-bot-to-your-server)
+    + [Running the program](#running-the-program)
+    + [Setting up additional things](#setting-up-additional-things)
+  * [Using the bot](#using-the-bot)
+    + [The commands](#the-commands)
+    + [Using the bot as a test paper](#using-the-bot-as-a-test-paper)
 
-## How to set it up?
+
+## Setting it up
 
 ### Preparation
 **For Windows users**
@@ -99,8 +110,9 @@ The bot's default command prefix is `q!` and this will invoke the bot. It should
 You can change the command prefix by opening `prefix.txt` on the root folder and
 replacing `q!` with anything followed by a special character like `q.`, `n&`, `a!`.
 
-### General commands
+### The commands
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
+
 **General Commands**
 - `ping` - Respond with Pong!
 - `say` - Make the bot say with your input.
@@ -125,6 +137,8 @@ These are the commands that you can use to interact with the bot. You can also l
 - `shutdown` - Shuts down the bot outside the terminal.
 
 ### Using the bot as a test paper
+This bot can be used as a digital question paper for a pop quiz, long test, and a periodical test.
+
 Before using the `testpaper` command to everyone (or the students I should say), take a look at the dedicated help for the `testpaper` command
 by sending `tphelp` on Discord. In here, you need to edit the `tphelp.txt` which is located on folder `testpaper`. It has a reference for you
 to add your class subject that into the file. You can delete everything **but make sure to add `>>>` in the very beginning of the file**.
@@ -133,7 +147,95 @@ Example:
 ```
 >>> Akihabara High
 
-q!testpaper readingandwriting - Begin the test for the subject Reading and Writing
-q!testpaper calculus - Begin the test for the subject Calculus
+`q!testpaper readingandwriting` - Begin the test for the subject Reading and Writing.
+`q!testpaper calculus` - Begin the test for the subject Calculus.
+`q!testpaper humananatomy` - Begin the test for the subject Human Anatomy.
+`q!testpaper pambansangwika` - Begin the test for the subject Pambansang Wika.
 ...
+and so forth
 ```
+
+***NOTE: If you changed the bot's prefix on the prefix file into something like `a!`, you need to also change `q!` into your own prefix like:***
+```
+>>> Akihabara High
+
+`a!testpaper readingandwriting` - Begin the test for the subject Reading and Writing.
+`a!testpaper calculus` - Begin the test for the subject Calculus.
+`a!testpaper humananatomy` - Begin the test for the subject Human Anatomy.
+`a!testpaper pambansangwika` - Begin the test for the subject Pambansang Wika.
+```
+
+If this bot will be used by the whole school with other grade levels most especially when all grade level have the same subject name,
+you may have to differentiate it by adding number at the end of the name of the subject indicating the grade level and adding categories to
+avoid conflict with other class subject and possibly the file structure on `testpaper` folder.
+
+Example:
+```
+>>> Akihabara High
+
+Grade 7:
+q!testpaper english7 - Begin the test for the subject English 7.
+q!testpaper science7 - Begin the test for the subject Science 7.
+q!testpaper math7 - Begin the test for the subject Math 7.
+q!testpaper tle7 - Begin the test for the subject TLE 7.
+q!testpaper filipino7 - Begin the test for the subject Filipino 7.
+
+Grade 8:
+q!testpaper english8 - Begin the test for the subject English 8.
+q!testpaper science8 - Begin the test for the subject Science 8.
+q!testpaper math8 - Begin the test for the subject Math 8.
+q!testpaper tle8 - Begin the test for the subject TLE 8.
+q!testpaper filipino8 - Begin the test for the subject Filipino 8.
+q!testpaper comsci - Begin the test for the subject Computer Science.
+
+Grade 9:
+q!testpaper english9 - Begin the test for the subject English 9.
+q!testpaper science9 - Begin the test for the subject Science 9.
+q!testpaper math9 - Begin the test for the subject Math 9.
+q!testpaper tle9 - Begin the test for the subject TLE 9.
+q!testpaper filipino9 - Begin the test for the subject Filipino 9.
+q!testpaper dramaarts - Begin the test for the subject Drama Arts.
+
+Grade 10:
+q!testpaper english10 - Begin the test for the subject English 10.
+q!testpaper science10 - Begin the test for the subject Science 10.
+q!testpaper math10 - Begin the test for the subject Math 10.
+q!testpaper tle10 - Begin the test for the subject TLE 10.
+q!testpaper filipino10 - Begin the test for the subject Filipino 10.
+q!testpaper he - Begin the test for the subject Home Economics.
+```
+
+After editing the `tphelp.txt` for your class subject or the whole school. It's time for you to make a test question for the whole
+class or the whole school. Inside the `testpaper` you will find 3 text files with almost the same content that you will gonna use
+for a reference.
+
+Example:
+```
+>>> Akihabara High School
+Subject: Science
+
+Direction: Choose your answer on the list and send it to your subject teacher through direct message.
+
+1. Anything that occupies space and has mass.
+a. Object   b. Matter   c. Things   d. String
+
+2. Aside from the three common state of matter, what do you call the fourth kind of matter?
+a. Solid    b. Gas    c. Plasma     d. Liquid
+
+3. This state of matter where molecules are closely packed together
+a. Solid    b. Gas    c. Plasma     d. Liquid
+
+4. This state of matter has definite volume but no fixed shape.
+a. Solid    b. Gas    c. Plasma     d. Liquid
+
+5. This state of matter has no fixed shape and no fixed volume.
+a. Solid    b. Gas    c. Plasma     d. Liquid
+
+6...
+a...
+
+and so forth...
+```
+
+After you edit the {subject}.txt and saved it inside `testpaper`, you can now go ahead start the online class and the question paper is
+prepared for the quiz.
