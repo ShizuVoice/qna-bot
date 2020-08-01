@@ -3,7 +3,9 @@ A Discord bot that is purposely used for online class as a simple online "test p
 
 Bot is still in development at this moment.
 
-## Preparation
+## How to set it up?
+
+### Preparation
 **For Windows users**
 
 Before downloading the source code, you will need to download and install `Python` first by going [here](https://www.python.org/downloads/).
@@ -20,7 +22,7 @@ and extract it anywhere you like.
 Most Linux distribution have `python3` installed. But if you are unsure, just type `apt-get install python3` with root privilege.
 And then install `discord.py` by typing `python3 -m pip install -U discord.py`.
 
-## Creating and setting up the bot
+### Creating and setting up the bot
 If you don't have Discord account yet, go to [Discord](https://discord.com) and create a new account. Also, you can download their client
 application for all platforms and then logging in after creating an account.
 
@@ -35,7 +37,7 @@ or anything you want and then uploading it to the website.
 If you did the optional step, now go to the "Bot" on the left panel and click the "Add Bot". When you receive a notice, just click
 "Yes, do it!" and you have successfully created a bot!
 
-## Inviting the bot to your server
+### Inviting the bot to your server
 After you created the bot (and you have created a server), head over to "OAuth2" on the left panel and you will now have to tick some boxes for the bot.
 
 Tick the `bot` box first on the Scopes area and then tick the following boxes below according to the bot's functions on Bot Permissions area.
@@ -46,7 +48,7 @@ After you ticked the necessary boxes, click "Copy" on the Scopes area and then v
 You will now get greeted where you will invite the bot. You just have to select your server and then clicking "Continue" and "Authorize" it.
 You may also get into a CAPTCHA process but it's easy and you will get greeted that the bot is successfully invited to your server.
 
-## Running the program
+### Running the program
 Go back to the [developers](https://discord.com/developers) page and go to the "Bot" section. This time you will going to take the bot's
 token to use with the program.
 
@@ -61,7 +63,7 @@ by typing `python3 qnamain.py`.
 
 Once you get the "successfully connected" message on the console, everything is working.
 
-## Setting up additional things
+### Setting up additional things
 Since we have successfully run the program, we need to take some user ID from admins or mods to use some owner-based commands on the bot.
 
 If you navigate to the root folder of qna-bot you will see the `author.txt` file. If you open it, you will see a random number inside the
@@ -87,5 +89,51 @@ If you want to add more user to use the owner-based command, it's the same like 
 
 And then save the text file.
 
-## Using the bot as a test paper
-***Soon***™
+## Using the bot
+The bot's default command prefix is `q!` and this will invoke the bot. It should look like this 
+
+`q!help`
+`q!ping`
+`q!userinfo`
+
+You can change the command prefix by opening `prefix.txt` on the root folder and
+replacing `q!` with anything followed by a special character like `q.`, `n&`, `a!`.
+
+### General commands
+These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
+**General Commands**
+- `ping` - Respond with Pong!
+- `say` - Make the bot say with your input.
+- `uptime` - Shows how long the bot has been up for.
+- `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
+- `version` - Shows the bot version.
+
+**Fun**
+- `rps` - Play rock, paper, scissors! - **Usage: `q!rps rock`**
+- `eightball` - Ask the eightball for question. - **Usage: `q!eightball Will I get a tasty food later?`**
+- `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tips)
+
+**Testpaper**
+- `tphelp` - Shows the testpaper help.
+- `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
+
+**Moderation/Utility (Administrator/Owner only)**
+- `kick` - Kicks a member on the server. - **Usage: `q!kick <user> <reason>`, `q!kick @VOID Being negative to the chat.`**
+- `ban` - Bans a member on the server. - **Usage: `q!ban <user> <reason>`, `q!ban @VOID Sent an NSFW picture on #general.`**
+- `purge` - Clears messages with a certain amount. - **Usage: `q!purge <amount>`, `q!purge 25`**
+- `status` - Set the bot's online status.
+- `shutdown` - Shuts down the bot outside the terminal.
+
+### Using the bot as a test paper
+Before using the `testpaper` command to everyone (or the students I should say), take a look at the dedicated help for the `testpaper` command
+by sending `tphelp` on Discord. In here, you need to edit the `tphelp.txt` which is located on folder `testpaper`. It has a reference for you
+to add your class subject that into the file. You can delete everything **but make sure to add `>>>` in the very beginning of the file**.
+
+Example:
+```
+>>> Akihabara High
+
+q!testpaper readingandwriting - Begin the test for the subject Reading and Writing
+q!testpaper calculus - Begin the test for the subject Calculus
+...
+```
