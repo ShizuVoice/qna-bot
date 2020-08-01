@@ -1,8 +1,7 @@
->>> **This will be example on the content on this file and the folder**
-Akihabara High School
-Science
+>>> Akihabara High School
+Subject: Science
 
-Direction: Choose your answer on the list and send it to <User>.
+Direction: Choose your answer on the list and send it to your subject teacher through direct message.
 
 1. This is a test.
 a. Test   b. Test   c. Test   d. Test
