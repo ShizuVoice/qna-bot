@@ -210,8 +210,8 @@ q!testpaper he - Begin the test for the subject Home Economics.
 ```
 
 After editing the `tphelp.txt` for your class subject or the whole school. It's time for you to make a test question for the whole
-class or the whole school. Inside the `testpaper` you will find 3 text files with almost the same content that you will gonna use
-for a reference.
+class or the whole school. Inside the `testpaper` you will find 3 text files that is `english.txt`, `math.txt` and `science.txt` with
+almost the same content that you will gonna use for a reference.
 
 Example:
 ```
