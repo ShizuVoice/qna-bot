@@ -25,7 +25,7 @@ class General(commands.Cog):
         embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/712312095214927892/cb43c18459a8eda7fd37fadd0d59222f.png?size=256')
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.9 Pre-release')
+        embed.add_field(name='Version', value='0.9.1 Pre-release')
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -70,6 +70,12 @@ class General(commands.Cog):
         embed.add_field(name='Bot?', value=member.bot)
 
         await ctx.send(embed=embed)
+
+# Dedicated error handling for this command
+    @say.error
+    async def say_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send("What should I say? `q!say <your response>`")
 
 def setup(bot):
     bot.add_cog(General(bot))

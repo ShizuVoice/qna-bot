@@ -19,10 +19,10 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='General Help')
-        embed.add_field(name='ping', value='Pong!', inline=False)
+        embed.add_field(name='ping', value='Respond with Pong!', inline=False)
         embed.add_field(name='say', value='Make the bot say with your input.', inline=False)
         embed.add_field(name='uptime', value='Shows how long the bot has been up for.', inline=False)
-        embed.add_field(name='userinfo', value='Shows info of a user.')
+        embed.add_field(name='userinfo', value='Shows info of a mentioned user or yourself.')
         embed.add_field(name='version', value='Shows the bot version.', inline=False)
 
         await author.send(embed=embed)
@@ -44,7 +44,7 @@ class Help(commands.Cog):
 
         embed.set_author(name='Testpaper')
         embed.add_field(name='tphelp', value='Shows the testpaper help.')
-        embed.add_field(name='testpaper', value='Sends the test question as Direct Message.', inline=False)
+        embed.add_field(name='testpaper', value='Sends the test question as a Direct Message.', inline=False)
 
         await author.send(embed=embed)
 
