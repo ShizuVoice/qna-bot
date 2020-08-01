@@ -2,7 +2,7 @@
  A Discord bot that is used for online class as a simple online "test paper" and a moderation bot.
  
  The true purpose for this bot is to use for school that doesn't have school website infrastructure. But simple
- and easy to manage test paper bot.
+ and easy to manage test paper bot with the use of [Discord](https://www.discord.com) as the platform.
  
  Bot is still in development at this moment.
 
