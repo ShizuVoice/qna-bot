@@ -1,4 +1,4 @@
-# QnA Bot Version 0.9 Pre-release by SilentVOEZ#2523
+# QnA Bot Version 0.9.1 Pre-release by SilentVOEZ#2523
 
 import discord
 import os
