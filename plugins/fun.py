@@ -1,7 +1,7 @@
 # QnA Bot by SilentVOEZ#2523
 # plugins (QnA Bot Py Extension)
 
-import discord
+import discord, datetime
 import random
 from discord.ext import commands
 
@@ -19,6 +19,7 @@ class Fun(commands.Cog):
 
     @commands.command()
     async def eightball(self, ctx, *, question):
+        consoletime = datetime.datetime.now()
         responses = ["It is certain.",
                     "It is decidedly so.",
                     "Without a doubt.",
@@ -40,7 +41,7 @@ class Fun(commands.Cog):
                     "Outlook not so good.",
                     "Very doubtful."]
         await ctx.send(f'{random.choice(responses)}')
-        print(f'Eightball triggered. Question: `{question}`')
+        print(f'{consoletime} [INFO] Eightball triggered. Question: `{question}`')
 
     @commands.command()
     async def haachama(self, ctx):

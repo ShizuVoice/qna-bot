@@ -1,10 +1,8 @@
 # QnA Bot by SilentVOEZ#2523
 # plugins (QnA Bot Py Extension)
 
-import discord, datetime, time
+import discord, datetime
 from discord.ext import commands
-
-start_time = time.time()
 
 class General(commands.Cog):
 
@@ -13,38 +11,28 @@ class General(commands.Cog):
 
     @commands.command()
     async def ping(self, ctx):
-        await ctx.send('Pong!')
+        consoletime = datetime.datetime.now()
+        print(f'{consoletime} [INFO] Pinging at `{round(self.bot.latency * 1000)} ms`')
+        await ctx.send(f'Pong! Responded for `{round(self.bot.latency * 1000)} ms`')
     
     @commands.command()
     async def version(self, ctx):
+        avatar = self.bot.user.avatar_url
         embed = discord.Embed(
             colour = discord.Colour.orange()
         )
 
         embed.set_author(name='QnA Bot')
-        embed.set_thumbnail(url='https://cdn.discordapp.com/avatars/712312095214927892/cb43c18459a8eda7fd37fadd0d59222f.png?size=256')
+        embed.set_thumbnail(url=avatar)
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.9.1 Pre-release')
+        embed.add_field(name='Version', value='0.9.2 Pre-release')
         await ctx.send(embed=embed)
 
     @commands.command()
     async def say(self, ctx, *, arg: commands.clean_content):
         await ctx.send(arg)
         await ctx.message.delete()
-
-    @commands.command(pass_context=True)
-    async def uptime(self, ctx):
-        current_time = time.time()
-        difference = int(round(current_time - start_time))
-        text = str(datetime.timedelta(seconds=difference))
-        embed = discord.Embed(colour=ctx.message.author.top_role.colour)
-        embed.add_field(name="Uptime", value=text)
-        embed.set_footer(text="Bot by SilentVOEZ")
-        try:
-            await ctx.send(embed=embed)
-        except discord.HTTPException:
-            await ctx.send("Current uptime: " + text)
 
     @commands.command()
     async def userinfo(self, ctx, member: discord.Member = None):
@@ -74,7 +62,9 @@ class General(commands.Cog):
 # Dedicated error handling for this command
     @say.error
     async def say_error(self, ctx, error):
+        consoletime = datetime.datetime.now()
         if isinstance(error, commands.MissingRequiredArgument):
+            print(f'{consoletime} [INFO] Say triggered, but no arguments found.')
             await ctx.send("What should I say? `q!say <your response>`")
 
 def setup(bot):
