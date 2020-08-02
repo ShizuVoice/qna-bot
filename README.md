@@ -34,8 +34,8 @@ and extract it anywhere you like.
 
 **For Linux users**
 
-Most Linux distribution have `python3` installed. But if you are unsure, just type `apt-get install python3` with root privilege.
-And then install `discord.py` by typing `python3 -m pip install -U discord.py`.
+Most Linux distribution have `python3` preinstalled. But if you are unsure, open a terminal and type `apt-get install python3` with root
+privilege. And then install `discord.py` by typing `python3 -m pip install -U discord.py`.
 
 ### Creating and setting up the bot
 If you don't have Discord account yet, go to [Discord](https://discord.com) and create a new account. Also, you can download their client
@@ -159,7 +159,8 @@ Example:
 and so forth
 ```
 
-***NOTE: If you changed the bot's prefix on the prefix file into something like `a!`, you need to also change `q!` into your own prefix like:***
+***NOTE: If you changed the bot's prefix on the prefix file into something like `a!`, you need to also change `q!` on `tphelp` into your own
+prefix like this:***
 ```
 >>> Akihabara High
 
@@ -243,3 +244,5 @@ and so forth...
 
 After you edit the {subject}.txt and saved it inside `testpaper`, you can now go ahead start the online class and the question paper is
 prepared for the quiz.
+
+And after the quiz, you can make another text file for the next topic and then overwriting/deleting the old text file inside `testpaper`.
