@@ -36,12 +36,14 @@ class Mod(commands.Cog):
 
     @kick.error
     async def kick_error(self, ctx, error):
+        consoletime = datetime.datetime.now()
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Usage is: `q!kick <User/ID> <Reason>`")
+        if isinstance(error, commands.MissingPermissions):
+            await ctx.send("You do not have permission to do that!")
+            print(f"{consoletime} [WARNING] Admin/mod command triggered but user didn't have enough permission to use it!")
         if isinstance(error, commands.BadArgument):
             await ctx.send("User not found!")
-        if isinstance(error, commands.MissingPermissions):
-            await ctx.send("You don't have permission to do that!")
         if isinstance(error, commands.CommandInvokeError):
             await ctx.send("Bot doesn't have permission to kick a member. Check other roles that may be overriding the bot's own role permission.")
         
@@ -49,12 +51,14 @@ class Mod(commands.Cog):
 
     @ban.error
     async def ban_error(self, ctx, error):
+        consoletime = datetime.datetime.now()
         if isinstance(error, commands.MissingRequiredArgument):
             await ctx.send("Usage is: `q!ban <User/ID> <Reason>`")
+        if isinstance(error, commands.MissingPermissions):
+            await ctx.send("You do not have permission to do that!")
+            print(f"{consoletime} [WARNING] Admin/mod command triggered but user didn't have enough permission to use it!")
         if isinstance(error, commands.BadArgument):
             await ctx.send("User not found!")
-        if isinstance(error, commands.MissingPermissions):
-            await ctx.send("You don't have permission to do that!")
         if isinstance(error, commands.CommandInvokeError):
             await ctx.send("Bot doesn't have permission to ban a member. Check other roles that may be overriding the bot's own role permission.")
 
@@ -66,8 +70,6 @@ class Mod(commands.Cog):
             await ctx.send("Usage is: `q!purge <amount>`")
         if isinstance(error, commands.BadArgument):
             await ctx.send("Not a number!")
-        if isinstance(error, commands.MissingPermissions):
-            await ctx.send("You don't have permission to do that!")
         if isinstance(error, commands.CommandInvokeError):
             await ctx.send("Bot doesn't have permission to delete a message. Check other roles that may be overriding the bot's own role permission.")
 

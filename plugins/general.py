@@ -26,12 +26,14 @@ class General(commands.Cog):
         embed.set_thumbnail(url=avatar)
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.9.2 Pre-release')
+        embed.add_field(name='Version', value='0.9.3 Pre-release Final')
         await ctx.send(embed=embed)
 
     @commands.command()
     async def say(self, ctx, *, arg: commands.clean_content):
+        consoletime = datetime.datetime.now()
         await ctx.send(arg)
+        print(f"{consoletime} [INFO] Say triggered by '{ctx.author}'. User said: '{arg}'")
         await ctx.message.delete()
 
     @commands.command()
@@ -64,8 +66,8 @@ class General(commands.Cog):
     async def say_error(self, ctx, error):
         consoletime = datetime.datetime.now()
         if isinstance(error, commands.MissingRequiredArgument):
-            print(f'{consoletime} [INFO] Say triggered, but no arguments found.')
             await ctx.send("What should I say? `q!say <your response>`")
+            print(f'{consoletime} [INFO] Say triggered, but no arguments found.')
 
 def setup(bot):
     bot.add_cog(General(bot))

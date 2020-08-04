@@ -18,22 +18,28 @@ class Events(commands.Cog):
         consoletime = datetime.datetime.now()
         print(f"{consoletime} [INFO] {self.bot.user.name} successfully connected.")
 
+# Planning to use for logging but it never worked out easily at this moment
+# Logging both terminal and file would be cool tho but Python said "nope"...
 #    @commands.Cog.listener()
 #    async def on_message(self, message):
-#        print(f"{message.author} said {message.content}")
+#        consoletime = datetime.datetime.now()
+#        print(f"{consoletime} [MESSAGE] '{message.author}' said '{message.content}'")
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         consoletime = datetime.datetime.now()
-        if isinstance(error, commands.CheckFailure):
-            print(f"{consoletime} [WARNING] Admin command triggered but user didn't have enough permission to use it!")
+        if isinstance(error, commands.MissingPermissions):
             await ctx.send("You do not have permission to do that!")
-        if isinstance(error, commands.CommandInvokeError):
-            print(f"{consoletime} [WARNING] Bot doesn't have permission to do certain action. Check other roles that may be overriding the bot's own role permission.")
-            await ctx.send("Bot doesn't have permission to do certain action. Check other roles that may be overriding the bot's own role permission.")
+            print(f"{consoletime} [WARNING] Admin/mod command triggered but user didn't have enough permission to use it!")
+#        if isinstance(error, commands.CommandInvokeError): # This code keeps raising as an error if bot doesn't have enough permission or an error occured over bad or missing arguments.
+#            await ctx.send("Command error!")
+#            print(f"{consoletime} [WARNING] Bot doesn't have permission to do certain action. Check other roles that may be overriding the bot's own role permission.")
+        if isinstance(error, commands.NotOwner):
+            await ctx.send("You are not one of the owner of this bot!")
+            print(f"{consoletime} [WARNING] Owner command triggered but user was not one of the bot owners.")
         if isinstance(error, commands.CommandNotFound):
-            print(f"{consoletime} [INFO] User invoked the bot with non-existing command.")
             await ctx.send("Command doesn't exist. *Maybe you have typed it wrong, no?*")
+            print(f"{consoletime} [INFO] User invoked the bot with non-existing command.")
 
         raise error
 

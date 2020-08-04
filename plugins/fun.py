@@ -11,11 +11,13 @@ class Fun(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def rps(self, ctx):
-        responses = ["It's a rock!",
-                    "It's a paper!",
-                    "It's a scissor!",]
-        await ctx.send(f'{random.choice(responses)}')
+    async def rps(self, ctx, *, draw):
+        consoletime = datetime.datetime.now()
+        responses = ["rock!",
+                    "paper!",
+                    "scissor!",]
+        await ctx.send("It's a " + f'{random.choice(responses)}')
+        print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw} while bot drawed {random.choice(responses)}")
 
     @commands.command()
     async def eightball(self, ctx, *, question):
@@ -41,7 +43,7 @@ class Fun(commands.Cog):
                     "Outlook not so good.",
                     "Very doubtful."]
         await ctx.send(f'{random.choice(responses)}')
-        print(f'{consoletime} [INFO] Eightball triggered. Question: `{question}`')
+        print(f"{consoletime} [INFO] Eightball triggered. Question: `{question}` Bot responded: '{random.choice(responses)}'")
 
     @commands.command()
     async def haachama(self, ctx):

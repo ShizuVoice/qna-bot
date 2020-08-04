@@ -19,8 +19,8 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='General Help')
-        embed.add_field(name='ping', value='Respond with "Pong!" with a latency time.', inline=False)
-        embed.add_field(name='say', value='Make the bot say with your input.', inline=False)
+        embed.add_field(name='ping', value='Respond with "Pong!" and latency time.', inline=False)
+        embed.add_field(name='say', value='Make the bot say with your response.', inline=False)
         embed.add_field(name='uptime', value='Shows how long the bot has been up for.', inline=False)
         embed.add_field(name='userinfo', value='Shows info of a mentioned user or yourself.')
         embed.add_field(name='version', value='Shows the bot version.', inline=False)
