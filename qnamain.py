@@ -1,9 +1,8 @@
-# QnA Bot Version 0.9.2 Pre-release by SilentVOEZ#2523
+# QnA Bot Version 0.9.3 Pre-release Final by SilentVOEZ#2523
 
 import discord, datetime, time
 import os
-#import sys
-import logging
+import sys
 
 import asyncio
 from discord.ext import commands
@@ -21,13 +20,14 @@ async def is_owner(ctx):
 
 @bot.event
 async def on_ready():
+    prefix = open('./prefix.txt','r').read()
     print(f'----------------')
     print(f'Logged in as: {bot.user.name}')
     print(f'With ID: {bot.user.id}')
     print(f'----------------')
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
-    activity = discord.Game(name="q!help, Pre-release", type=3)
+    activity = discord.Game(name=f"{prefix}help, Pre-release", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
 # Uptime command
@@ -50,7 +50,8 @@ async def uptime(ctx):
 @commands.is_owner()
 async def status(ctx, status: str):
     status.lower()
-    activity = discord.Game(name="q!help, Pre-release", type=3)
+    prefix = open('./prefix.txt','r').read()
+    activity = discord.Game(name=f"{prefix}help, Pre-release", type=3)
     if status == 'online':
         await bot.change_presence(status=discord.Status.online, activity=activity)
     elif status == 'idle':
