@@ -118,8 +118,8 @@ replacing `q!` with anything followed by a special character like `q.`, `n&`, `a
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
 
 **General Commands**
-- `ping` - Respond with Pong!
-- `say` - Make the bot say with your input.
+- `ping` - Respond with "Pong!" and latency time.
+- `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`
 - `uptime` - Shows how long the bot has been up for.
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
 - `version` - Shows the bot version.
@@ -127,7 +127,7 @@ These are the commands that you can use to interact with the bot. You can also l
 **Fun**
 - `rps` - Play rock, paper, scissors! - **Usage: `q!rps rock`**
 - `eightball` - Ask the eightball for question. - **Usage: `q!eightball Will I get a tasty food later?`**
-- `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tips)
+- `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tip)
 
 **Testpaper**
 - `tphelp` - Shows the testpaper help.
