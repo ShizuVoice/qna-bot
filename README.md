@@ -1,5 +1,5 @@
 # QnA Bot
-A Discord bot that is used for online class as a simple online "test paper" and a moderation bot.
+A Discord bot that is used for online class that sends question or test paper to students.
  
 The true purpose of this bot is to use for schools that doesn't have a website infrastructure. The bot will use
 [Discord](https://www.discord.com) as the platform. It is simple and easy to manage.
