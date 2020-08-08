@@ -20,6 +20,10 @@ The true purpose of this bot is to use for schools that doesn't have a website i
 
 ## Setting it up
 
+### Requirements
+- Any PC that is running Windows 7 or later, or any Linux distro
+- An active internet connection (*Glxxe I'm looking at you*) 
+
 ### Preparation
 **For Windows users**
 
