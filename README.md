@@ -83,30 +83,20 @@ by typing `python3 qnamain.py`.
 Once you get the "successfully connected" message on the console, everything is working.
 
 ### Setting up additional things
-Since we have successfully run the program, we need to take some user ID from admins or mods to use some owner-based commands on the bot.
+Since we have successfully run the program, we need to take an ID from a single user (your classroom adviser, principal, IT coordinator) to use some
+owner-based commands on the bot.
 
-If you navigate to the root folder of qna-bot you will see the `author.txt` file. If you open it, you will see a random number inside the
-text file which is 
+If you navigate to the root folder of qna-bot you will see the `author.txt` file. This will be used for the bot to make that user (your classroom
+adviser, principal, IT coordinator) the "owner" of the bot.
 
-`170093603530473472`
-
-**Don't delete that number since that's my ID when you need an assistance from me.**
-
-To get the user ID from other members, make sure the bot is closed at the moment. Open your Discord client and make sure you have "Developer Mode"
+To get the user ID from other members, make sure the bot is closed at the moment. Open and login to your Discord client and make sure you have "Developer Mode"
 enabled from the setting. You can look it up [here](https://imgur.com/a/2u9d0MF).
 
-If the "Developer Mode" is enabled, go back to your server and look up the name of that member you want to add on the member list or on the left side.
-Right click on their name and then click "Copy ID". Now you just have to paste on `author.txt` but I said that you must not delete my ID, here's how.
+If the "Developer Mode" is enabled, go back to your server and look up the name of that member (your classroom adviser, principal, IT coordinator) you
+want to make it as the owner on the member list on the right side.
+Right click on their name and then click "Copy ID". After that open `author.txt`, clear the content and paste it there.
 
-Just add comma after my ID and then add space after the comma and paste the ID. Like this
-
-`170093603530473472, 1700xxxxxxx123456`
-
-If you want to add more user to use the owner-based command, it's the same like I said above which it looks like this.
-
-`170093603530473472, 17001700xxxxxxx123456, 240065xxxxxxx789012, 580293xxxxxxx654321`
-
-And then save the text file.
+And then save the text file and the bot is ready for use.
 
 ## Using the bot
 The bot's default command prefix is `q!` and this will invoke the bot. It should look like this 
