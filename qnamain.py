@@ -1,4 +1,4 @@
-# QnA Bot Version 0.9.3 Pre-release Final by SilentVOEZ#2523
+# QnA Bot Version 0.9.4 Pre-release Final Debug by SilentVOEZ#2523
 
 import discord, datetime, time
 import os
@@ -11,12 +11,14 @@ start_time = time.time()
 
 TOKEN = open("./token.txt","r").read()
 PREFIX = open("./prefix.txt","r").read()
-bot = commands.Bot(command_prefix=PREFIX)
-bot.remove_command('help')
 
-async def is_owner(ctx):
-    owner = open("./author.txt","r").read()
-    return ctx.author.id == owner
+ID = open ("./author.txt", "r").read()
+ID_list = ID.split()
+map_object = map(int, ID_list)
+list_IDs = list(map_object)
+
+bot = commands.Bot(command_prefix=PREFIX, owner_ids=list_IDs)
+bot.remove_command('help')
 
 @bot.event
 async def on_ready():
@@ -27,7 +29,7 @@ async def on_ready():
     print(f'----------------')
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
-    activity = discord.Game(name=f"{prefix}help, Pre-release", type=3)
+    activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
 # Uptime command
@@ -51,7 +53,7 @@ async def uptime(ctx):
 async def status(ctx, status: str):
     status.lower()
     prefix = open('./prefix.txt','r').read()
-    activity = discord.Game(name=f"{prefix}help, Pre-release", type=3)
+    activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
     if status == 'online':
         await bot.change_presence(status=discord.Status.online, activity=activity)
     elif status == 'idle':
@@ -61,7 +63,7 @@ async def status(ctx, status: str):
     else:
         await ctx.send(f'"{status}" is not a valid argument.')
 
-#Code borrowed from DaijobuDes
+# A bit of code borrowed from DaijobuDes
 @bot.command()
 @commands.is_owner()
 async def load(ctx, extension):

@@ -1,15 +1,7 @@
->>> **In progress**
+>>> **In progress - Debugging Stage**
 
-Ensure you have your entire subject on folder "testpaper" for your class!
-----------------------------------------------------------------------------------------
-Use this line below as reference for each subject/test questions
-`q!testpaper english` - Begin the test for the English subject.
-or
-`q!testpaper <subject>` - <Description>
-----------------------------------------------------------------------------------------
-`q!testpaper english` - Begin the test for the English subject.
-`q!testpaper math` - Begin the test for the Math subject.
-
-Also, depending on where the class have reached to like a pop quiz, you can change the
-description to avoid confusion.
-`q!testpaper tle` - Begin the pop quiz for the TLE subject.
+`q!testpaper english` - Begin the test for the subject English.
+`q!testpaper math` - Begin the test for the subject Math.
+`q!testpaper science` - Begin the test for the subject Science.
+`q!testpaper japanese-english` - Begin the test for the subject Japanese-English.
+    **NOTICE: This subject may not work if it's running on Windows**

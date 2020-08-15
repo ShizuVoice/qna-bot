@@ -14,6 +14,10 @@ class General(commands.Cog):
         consoletime = datetime.datetime.now()
         print(f'{consoletime} [INFO] Pinging at `{round(self.bot.latency * 1000)} ms`')
         await ctx.send(f'Pong! Responded for `{round(self.bot.latency * 1000)} ms`')
+
+    @commands.command()
+    async def hello(self, ctx):
+        await ctx.send("Hello!")
     
     @commands.command()
     async def version(self, ctx):
@@ -26,7 +30,7 @@ class General(commands.Cog):
         embed.set_thumbnail(url=avatar)
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.9.3 Pre-release Final')
+        embed.add_field(name='Version', value='0.9.4 Pre-release Final Debug')
         await ctx.send(embed=embed)
 
     @commands.command()

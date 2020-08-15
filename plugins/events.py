@@ -26,6 +26,17 @@ class Events(commands.Cog):
 #        print(f"{consoletime} [MESSAGE] '{message.author}' said '{message.content}'")
 
     @commands.Cog.listener()
+    async def on_message(self, message):
+        consoletime = datetime.datetime.now()
+        if message.author == self.bot.user:
+            return
+
+        message.content.lower()
+        if message.content.startswith('silentvoice'):
+            await message.channel.send("<@170093603530473472>")
+            print(f"{consoletime} [INFO] Event triggered. 'silentvoice'.")
+
+    @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         consoletime = datetime.datetime.now()
         if isinstance(error, commands.MissingPermissions):

@@ -1,23 +1,25 @@
->>> Akihabara High School
-Subject: Math
+>>> Akihabara Elementary
+Subject: Math - Qna Bot
 
 Direction: Choose your answer on the list and send it to your subject teacher through direct message.
 
-1. This is a test.
-a. Test   b. Test   c. Test   d. Test
+1. If SilentVOEZ has 6 apples and QnA Bot has 4 apples and you add up together, how many apples were
+in total?
+a. 8  b. 10   c. 9   d. 11
 
-2. This will be a test
-a. Test   b. Test   c. Test   d. Test
+2. QnA Bot has 18 apples, SilentVOEZ ate 5 apples. How apples were left?
+a. 13   b. 14   c. 12   d. 10
 
-3. This is gonna show as a template for the bot.
-a. Test   b. Test   c. Test   d. Test
+3. Mr. Admin divided the 12 oranges into 3. How many group of oranges were in total?
+a. 1   b. 2   c. 3   d. 4
 
-4. This will follow to until the last question but may depend how big is the question paper since
-there is a character limitation inside Discord that can't be prevented.
-a. Test   b. Test   c. Test   d. Test
+4. Rushia has 6 cutting board on her kitchen, Noel took 4 cutting board. How many cutting board
+were left?
+a. 5   b. 3   c. 2   d. 1
 
-5. ...
-a...
+5. Korone bought 25 gummy fingers from a candy store. She gave Okayu 7 gummy fingers, 5 for Fubuki,
+and 6 for Mio. How many gummy fingers does Korone have?
+a. 8   b. 7   c. 9   d. 6
 
 6...
 a...

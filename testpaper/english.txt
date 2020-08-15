@@ -1,25 +1,27 @@
->>> Akihabara High School
-Subject: English
+>>> Akihabara Elementary
+Subject: English - Qna Bot
 
 Direction: Choose your answer on the list and send it to your subject teacher through direct message.
 
-1. This is a test.
-a. Test   b. Test   c. Test   d. Test
+1. A word that refers to a person, place, things, objects.
+a. Pronoun   b. Noun   c. Adverb   d. Adjective
 
-2. This will be a test
-a. Test   b. Test   c. Test   d. Test
+2. A word that substitute a noun.
+a. Pronoun   b. Noun   c. Adverb   d. Adjective
 
-3. This is gonna show as a template for the bot.
-a. Test   b. Test   c. Test   d. Test
+3. A word that describes a noun.
+a. Pronoun   b. Noun   c. Adverb   d. Adjective
 
-4. This will follow to until the last question but may depend how big is the question paper since
-there is a character limitation inside Discord that can't be prevented.
-a. Test   b. Test   c. Test   d. Test
+4. A word that describes a verb.
+a. Pronoun   b. Noun   c. Adverb   d. Adjective
 
-5. ...
-a...
+5. If two words have the same meaning, it is called?
+a. Morpheme  b. Antonym  c. Synonym   d. None of the above
 
-6...
-a...
+6 If two words have opposite meaning, it is called?
+a. Morpheme  b. Antonym  c. Synonym   d. None of the above
+
+7. ...
+a. ...
 
 and so forth...

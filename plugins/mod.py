@@ -27,10 +27,43 @@ class Mod(commands.Cog):
         await ctx.send(f"{member.mention} was banned by {ctx.author.mention}.\n Reason: {reason}")
         print(f"{consoletime} [INFO] User '{member.mention}' got banned by '{ctx.author.mention}' with the reason of '{reason}'.")
 
+#    @commands.command()
+#    @commands.has_permissions(manage_messages=True)
+#    async def purge(self, ctx, amount: int):
+#        await ctx.channel.purge(limit=amount + 1)
+
     @commands.command()
-    @commands.has_permissions(manage_messages=True)
-    async def purge(self, ctx, amount: int):
-        await ctx.channel.purge(limit=amount + 1)
+    @commands.has_permissions(administrator=True)
+    async def purge(self, ctx, limit=50, member: discord.Member=None):
+        await ctx.message.delete()
+        msg = []
+        try:
+            limit = int(limit)
+        except:
+            return await ctx.send("Please pass in an integer as limit")
+        if not member:
+            await ctx.channel.purge(limit=limit)
+            return await ctx.send(f"Purged {limit} messages", delete_after=5)
+        async for m in ctx.channel.history():
+            if len(msg) == limit:
+                break
+            if m.author == member:
+                msg.append(m)
+        await ctx.channel.delete_messages(msg)
+        await ctx.send(f"Purged {limit} messages of {member.mention}", delete_after=5)
+
+    @commands.command()
+    @commands.has_permissions(administrator=True)
+    async def psa(self, ctx, *, arg):
+        consoletime = datetime.datetime.now()
+        embed = discord.Embed(colour = discord.Colour.red())
+        
+        embed.add_field(name='Public System Announcement', value=(f'{arg}'))
+
+        await ctx.send(embed=embed)
+        await ctx.message.delete()
+        print(f"{consoletime} [INFO] PSA triggered! It's said: '{arg}'")
+
 
 # Dedicated error handling for this commands
 
@@ -64,14 +97,16 @@ class Mod(commands.Cog):
 
         raise error
 
-    @purge.error
-    async def purge_error(self, ctx, error):
-        if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send("Usage is: `q!purge <amount>`")
-        if isinstance(error, commands.BadArgument):
-            await ctx.send("Not a number!")
-        if isinstance(error, commands.CommandInvokeError):
-            await ctx.send("Bot doesn't have permission to delete a message. Check other roles that may be overriding the bot's own role permission.")
+#    @purge.error
+#    async def purge_error(self, ctx, error):
+#        if isinstance(error, commands.MissingRequiredArgument):
+#            await ctx.send("Usage is: `q!purge <amount>`")
+#        if isinstance(error, commands.BadArgument):
+#            await ctx.send("Not a number!")
+#        if isinstance(error, commands.CommandInvokeError):
+#            await ctx.send("Bot doesn't have permission to delete a message. Check other roles that may be overriding the bot's own role permission.")
+#
+#        raise error
 
 def setup(bot):
     bot.add_cog(Mod(bot))
