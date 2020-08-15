@@ -30,8 +30,8 @@ The true purpose of this bot is to use for schools that doesn't have a website i
 Before downloading the source code, you will need to download and install `Python` first by going [here](https://www.python.org/downloads/).
 After downloading the installer, run it and make sure you have ticked the box "Add Python 3.x to PATH" before installing.
 
-After installing Python, you have to open Command Prompt and install `discord.py` by typing `py -3 -m pip install -U discord.py` into
-the Command Prompt.
+After installing Python, you have to open Command Prompt and install `discord.py` and `psutil` by typing `py -3 -m pip install -U discord.py`
+and `py -3 -m pip install -U psutil` into the Command Prompt.
 
 After installing `discord.py`, you will need to download the lastest source code [here](https://github.com/SilentVOEZ/qna-bot/releases) 
 and extract it anywhere you like.
