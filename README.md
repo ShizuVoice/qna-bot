@@ -4,7 +4,7 @@ A Discord bot that is used for online class that sends question or test paper to
 The true purpose of this bot is to use for schools that doesn't have a website infrastructure. The bot will use
 [Discord](https://www.discord.com) as the platform. It is simple and easy to manage.
  
-**Bot is in final state on Pre-release stage**
+**Bot is in final state on Pre-release stage. Latest debugging version is available for download in the master branch.**
 
 - [QnA Bot](#qna-bot)
   * [Setting it up](#setting-it-up)
