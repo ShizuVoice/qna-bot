@@ -2,6 +2,7 @@
 # plugins (QnA Bot Py Extension)
 
 import discord, datetime
+import sys
 from discord.ext import commands
 
 class General(commands.Cog):
@@ -21,6 +22,12 @@ class General(commands.Cog):
     
     @commands.command()
     async def version(self, ctx):
+        BOTVERSION = '0.9.4 Pre-release Final Debug'
+        DPYVERSION = discord.__version__
+        PYVERSIONMAJ = sys.version_info.major
+        PYVERSIONMIN = sys.version_info.minor
+        PYVERSIONMIC = sys.version_info.micro
+
         avatar = self.bot.user.avatar_url
         embed = discord.Embed(
             colour = discord.Colour.orange()
@@ -30,7 +37,9 @@ class General(commands.Cog):
         embed.set_thumbnail(url=avatar)
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value='0.9.4 Pre-release Final Debug')
+        embed.add_field(name='Version', value=BOTVERSION, inline=False)
+        embed.add_field(name='Discord.py Version', value=DPYVERSION, inline=False)
+        embed.add_field(name='Python Version', value=(f'{PYVERSIONMAJ}.{PYVERSIONMIN}.{PYVERSIONMIC}'), inline=False)
         await ctx.send(embed=embed)
 
     @commands.command()

@@ -27,11 +27,6 @@ class Mod(commands.Cog):
         await ctx.send(f"{member.mention} was banned by {ctx.author.mention}.\n Reason: {reason}")
         print(f"{consoletime} [INFO] User '{member.mention}' got banned by '{ctx.author.mention}' with the reason of '{reason}'.")
 
-#    @commands.command()
-#    @commands.has_permissions(manage_messages=True)
-#    async def purge(self, ctx, amount: int):
-#        await ctx.channel.purge(limit=amount + 1)
-
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def purge(self, ctx, limit=50, member: discord.Member=None):
@@ -56,9 +51,9 @@ class Mod(commands.Cog):
     @commands.has_permissions(administrator=True)
     async def psa(self, ctx, *, arg):
         consoletime = datetime.datetime.now()
-        embed = discord.Embed(colour = discord.Colour.red())
+        embed = discord.Embed(colour = discord.Colour.darker_grey())
         
-        embed.add_field(name='Public System Announcement', value=(f'{arg}'))
+        embed.add_field(name='Public Announcement', value=(f'{arg}'))
 
         await ctx.send(embed=embed)
         await ctx.message.delete()
