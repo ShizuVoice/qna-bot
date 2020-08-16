@@ -4,6 +4,7 @@
 import discord, datetime
 from discord.ext import commands
 import psutil
+from psutil._common import bytes2human
 
 class Monitor(commands.Cog):
 
@@ -23,10 +24,14 @@ class Monitor(commands.Cog):
         tmem = psutil.virtual_memory().total/1024/1024
         pmem = round((usedmem/tmem)*100)
         # PSUtil - Swap Memory Usage
-        dict(psutil.swap_memory()._asdict())
-        uswap = psutil.swap_memory().used/1024/1024
-        tswap = psutil.swap_memory().total/1024/1024
-        pswap = round((uswap/tswap)*100)
+        # dict(psutil.swap_memory()._asdict())
+        # uswap = psutil.swap_memory().used/1024/1024
+        # tswap = psutil.swap_memory().total/1024/1024
+        # pswap = round((uswap/tswap)*100)
+        # PSUtil Network Usage
+        # Soon(TM)
+        
+
         # PSUtil Operating System
         if psutil.LINUX:
             os = 'Linux'
@@ -37,11 +42,12 @@ class Monitor(commands.Cog):
         else:
             os = 'Unknown'
 
-        embed.set_author(name='Bot Monitor')
+        embed.set_author(name='System Monitor')
         embed.add_field(name="CPU Usage", value=f'{psutil.cpu_percent()}%', inline=True)
         embed.add_field(name="CPU Cores", value=psutil.cpu_count(), inline=True)
-        embed.add_field(name="RAM Usage", value=f'{round(uswap)}/{round(tmem)}MB ({round(pmem)}%)', inline=True)
-        embed.add_field(name="Swap Usage", value=f'{round(uswap)}/{round(tswap)}MB ({round(pmem)}%)', inline=True)
+        embed.add_field(name="RAM Usage", value=f'{round(usedmem)}/{round(tmem)}MB ({round(pmem)}%)', inline=True)
+        # embed.add_field(name="Swap Usage", value=f'{round(uswap)}/{round(tswap)}MB ({round(pmem)}%)', inline=True)
+        embed.add_field(name='Network Usage', value=('*Not available*'), inline=True)
         embed.add_field(name="Operating System", value=os, inline=True)
 
         await ctx.send(embed=embed)
