@@ -21,7 +21,7 @@ The true purpose of this bot is to use for schools that doesn't have a website i
 ## Setting it up
 
 ### Requirements
-- Any PC that is running Windows 7 or later, or any Linux distro
+- Any PC that is running Windows 7 or later, macOS, or any Linux distro
 - An active internet connection (*Glxxe I'm looking at you*) 
 
 ### Preparation
@@ -30,8 +30,8 @@ The true purpose of this bot is to use for schools that doesn't have a website i
 Before downloading the source code, you will need to download and install `Python` first by going [here](https://www.python.org/downloads/).
 After downloading the installer, run it and make sure you have ticked the box "Add Python 3.x to PATH" before installing.
 
-After installing Python, you have to open Command Prompt and install `discord.py` by typing `py -3 -m pip install -U discord.py` into
-the Command Prompt.
+After installing Python, you have to open Command Prompt and install `discord.py` and `psutil` by typing `py -3 -m pip install -U discord.py`
+and `py -3 -m pip install -U psutil` into the Command Prompt.
 
 After installing `discord.py`, you will need to download the lastest source code [here](https://github.com/SilentVOEZ/qna-bot/releases) 
 and extract it anywhere you like.
@@ -39,7 +39,8 @@ and extract it anywhere you like.
 **For Linux users**
 
 Most Linux distribution have `python3` preinstalled. But if you are unsure, open a terminal and type `apt-get install python3` with root
-privilege. And then install `discord.py` by typing `python3 -m pip install -U discord.py`.
+privilege. And then install `discord.py` and `psutil` by typing `python3 -m pip install -U discord.py` and `python3 -m pip install
+-U psutil`.
 
 ### Creating and setting up the bot
 If you don't have Discord account yet, go to [Discord](https://discord.com) and create a new account. Also, you can download their client
@@ -110,7 +111,7 @@ The bot's default command prefix is `q!` and this will invoke the bot. It should
 `q!userinfo`
 
 You can change the command prefix by opening `prefix.txt` on the root folder and
-replacing `q!` with anything followed by a special character like `q.`, `n&`, `a!`.
+replacing `q!` with anything followed by a special character like `q.`, `n&`, `a!` or only a special character like `.`, `!`, `$`.
 
 ### The commands
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
@@ -119,12 +120,14 @@ These are the commands that you can use to interact with the bot. You can also l
 - `ping` - Respond with "Pong!" and latency time.
 - `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`
 - `uptime` - Shows how long the bot has been up for.
+- `monitor` - Shows the system usage where the bot is running on.
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
 - `version` - Shows the bot version.
 
 **Fun**
 - `rps` - Play rock, paper, scissors! - **Usage: `q!rps rock`**
 - `eightball` - Ask the eightball for question. - **Usage: `q!eightball Will I get a tasty food later?`**
+- `eightballfil` - Magtanong kay eightball ng isang katanungan. **Usage: `q!eightballfil Magkaroon ba ako ng matamis na pagkain mamaya?`**
 - `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tip)
 
 **Testpaper**
@@ -139,7 +142,8 @@ These are the commands that you can use to interact with the bot. You can also l
 - `shutdown` - Shuts down the bot outside the terminal.
 
 ### Using the bot as a test paper
-This bot can be used as a digital question paper for a pop quiz, long test, and a periodical test.
+This bot can be used to send question paper for a pop quiz, long test, and a periodical test. But note that it still doesn't have the ability
+to give a choice for answer and auto-correct the answer from the user yet. This is planned for the future version.
 
 Before using the `testpaper` command to everyone (or the students I should say), take a look at the dedicated help for the `testpaper` command
 by sending `tphelp` on Discord. In here, you need to edit the `tphelp.txt` which is located on folder `testpaper`. It has a reference for you
