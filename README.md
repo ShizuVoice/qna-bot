@@ -118,7 +118,7 @@ These are the commands that you can use to interact with the bot. You can also l
 
 **General Commands**
 - `ping` - Respond with "Pong!" and latency time.
-- `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`
+- `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`**
 - `uptime` - Shows how long the bot has been up for.
 - `monitor` - Shows the system usage where the bot is running on.
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
