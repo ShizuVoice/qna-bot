@@ -15,7 +15,7 @@ class Fun(commands.Cog):
         consoletime = datetime.datetime.now()
         responses = ["rock!",
                     "paper!",
-                    "scissor!",]
+                    "scissor!"]
         await ctx.send("It's a " + f'{random.choice(responses)}')
         print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw}.")
 
