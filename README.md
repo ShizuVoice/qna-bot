@@ -1,4 +1,7 @@
 # QnA Bot
+
+[![CodeFactor](https://www.codefactor.io/repository/github/silentvoez/qna-bot/badge)](https://www.codefactor.io/repository/github/silentvoez/qna-bot)
+
 A Discord bot that is used for online class that sends question or test paper to students.
  
 The true purpose of this bot is to use for schools that doesn't have a website infrastructure. The bot will use
@@ -74,7 +77,7 @@ token to use with the program.
 
 When you are in the Bot section, click "Copy" below the "Click to Reveal Token" and to go the root folder of qna-bot. When you are in the root
 folder of qna-bot, open `token.txt` and then clear the content of it and then paste the token and save it.
-*Be warned that when someone saw your bot token, they can use your bot without your control! When in doubt, go to the Bot section of the
+*Be warned that when someone saw your bot token, they can use your bot account without your control! When in doubt, go to the Bot section of the
 [developers](https://discord.com/developers) page, click "Regenerate" and then "Copy" and then paste the token in the `token.txt`*
 
 After that, you just have to open `qnamain.py` and you a console window will appear. Or you can run it on Command Prompt by navigating to
