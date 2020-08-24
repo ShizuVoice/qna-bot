@@ -19,6 +19,9 @@ The true purpose of this bot is to use for schools that doesn't have a website i
   * [Using the bot](#using-the-bot)
     + [The commands](#the-commands)
     + [Using the bot as a test paper](#using-the-bot-as-a-test-paper)
+  * [Some Notes](#some-notes)
+    + [Credits](#credits)
+    + [Extras](#extras)
 
 
 ## Setting it up
@@ -251,3 +254,14 @@ After you edit the {subject}.txt and saved it inside `testpaper`, you can now go
 prepared for the quiz.
 
 And after the quiz, you can make another text file for the next topic and then overwriting/deleting the old text file inside `testpaper`.
+
+## Some Notes
+
+### Credits
+
+Thanks to [DaijobuDes](https://www.github.com/daijobudes) and to the community on Stackoverflow for helping me out on making this bot possible.
+
+### Extras
+
+If you want to help out make the bot even better, consider reading the documentation of [discord.py](https://discordpy.readthedocs.io/en/latest/) and do a
+pull request to this GitHub page.
