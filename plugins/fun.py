@@ -16,8 +16,11 @@ class Fun(commands.Cog):
         responses = ["rock!",
                     "paper!",
                     "scissor!"]
-        await ctx.send("It's a " + f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw}.")
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send("It's a " + f'{responsebuffer}')
+        print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw}. Bot drawed {responsebuffer}")
 
     @commands.command()
     async def eightball(self, ctx, *, question):
@@ -42,8 +45,11 @@ class Fun(commands.Cog):
                     "My sources say no.",
                     "Outlook not so good.",
                     "Very doubtful."]
-        await ctx.send(f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] Eightball triggered. Question: `{question}`")
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send(f'{responsebuffer}')
+        print(f"{consoletime} [INFO] Eightball triggered. Question: '{question}' Answer: '{responsebuffer}'")
 
     @commands.command()
     async def eightballfil(self, ctx, *, question):
@@ -66,8 +72,11 @@ class Fun(commands.Cog):
                     "Hindi.",
                     "Medyo hindi maganda.",
                     "Napaka duda."]
-        await ctx.send(f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] Eightballfil triggered. Question: `{question}`")
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send(f'{responsebuffer}')
+        print(f"{consoletime} [INFO] Eightballfil triggered. Question: '{question}' Answer: '{responsebuffer}'")
 
     @commands.command()
     async def haachama(self, ctx):

@@ -22,7 +22,7 @@ class General(commands.Cog):
     
     @commands.command()
     async def version(self, ctx):
-        BOTVERSION = '0.9.5 Pre-release Final Debug'
+        BOTVERSION = '1.0.0 Stable'
         DPYVERSION = discord.__version__
         PYVERSIONMAJ = sys.version_info.major
         PYVERSIONMIN = sys.version_info.minor
