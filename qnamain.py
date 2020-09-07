@@ -33,22 +33,6 @@ async def on_ready():
     activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
-# Improved Status Cycle
-@bot.command()
-@commands.is_owner()
-async def online(ctx, *, cactivity = ''):
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=f'{cactivity}', type=3))
-
-@bot.command()
-@commands.is_owner()
-async def idle(ctx, *, cactivity = ''):
-    await bot.change_presence(status=discord.Status.idle, activity=discord.Game(name=f'{cactivity}', type=3))
-
-@bot.command()
-@commands.is_owner()
-async def dnd(ctx, *, cactivity = ''):
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name=f'{cactivity}', type=3))
-
 # Extension commands/code I borrowed from DaijobuDes
 @bot.command()
 @commands.is_owner()
@@ -113,50 +97,6 @@ async def unloadall(ctx):
             bot.unload_extension(f'plugins.{filename[:-3]}')
             await ctx.send(f"**{filename}** unloaded")
             print(f'{consoletime} [INFO] {filename} extension unloaded.')
-
-# Utility
-@bot.command(pass_context=True)
-async def monitor(ctx):
-    # Time
-    current_time = time.time()
-    difference = int(round(current_time - start_time))
-    utime = str(datetime.timedelta(seconds=difference))
-
-    embed = discord.Embed(
-        colour = discord.Colour.green()
-    )
-
-    # PSUtil - RAM Usage
-    dict(psutil.virtual_memory()._asdict())
-    usedmem = psutil.virtual_memory().used/1024/1024
-    # activemem = psutil.virtual_memory().active
-    tmem = psutil.virtual_memory().total/1024/1024
-    pmem = round((usedmem/tmem)*100)
-
-    # PSUtil - Swap Memory Usage
-    # dict(psutil.swap_memory()._asdict())
-    # uswap = psutil.swap_memory().used/1024/1024
-    # tswap = psutil.swap_memory().total/1024/1024
-    # pswap = round((uswap/tswap)*100)
-
-    # PSUtil Operating System
-    if psutil.LINUX:
-        os = 'Linux'
-    elif psutil.MACOS:
-        os = 'MacOS'
-    elif psutil.WINDOWS:
-        os = 'Windows'
-    else:
-        os = 'Unknown'
-    embed.set_author(name='System Monitor')
-    embed.add_field(name="CPU Usage", value=f'{psutil.cpu_percent()}%', inline=True)
-    embed.add_field(name="CPU Cores", value=psutil.cpu_count(), inline=True)
-    embed.add_field(name="RAM Usage", value=f'{round(usedmem)}/{round(tmem)}MB ({round(pmem)}%)', inline=True)
-    # embed.add_field(name="Swap Usage", value=f'{round(uswap)}/{round(tswap)}MB ({round(pmem)}%)', inline=True)
-    embed.add_field(name="Uptime", value=f'{utime}')
-    embed.add_field(name="Operating System", value=os, inline=True)
-    embed.set_footer(text="Bot by SilentVOEZ")
-    await ctx.send(embed=embed)
 
 @bot.command()
 @commands.is_owner()
