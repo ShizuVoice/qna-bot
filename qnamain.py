@@ -30,7 +30,7 @@ async def on_ready():
     print(f'----------------')
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
-    activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
+    activity = discord.Game(name=f"{prefix}help | Stable version", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
 
 # Extension commands/code I borrowed from DaijobuDes
