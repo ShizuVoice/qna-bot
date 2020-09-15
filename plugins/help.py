@@ -23,8 +23,8 @@ class Help(commands.Cog):
         embed.add_field(name='hello', value='Respond with "Hello!" when bot is online.', inline=False)
         embed.add_field(name='ping', value='Respond with "Pong!" and latency time.', inline=False)
         embed.add_field(name='say', value='Make the bot say with your response.', inline=False)
-        embed.add_field(name='uptime', value='Shows how long the bot has been up for.', inline=False)
         embed.add_field(name='userinfo', value='Shows info of a mentioned user or yourself.')
+        embed.add_field(name='status', value="Shows the status of the computer where the bot is running on", inline=False)
         embed.add_field(name='version', value='Shows the bot version.', inline=False)
 
         await author.send(embed=embed)
@@ -56,7 +56,7 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='Moderation (Administrator/Owner only)')
-        embed.add_field(name='psa', value='Make a public announcement within that channel you were on.', inline=False)
+        embed.add_field(name='pas', value='Make a public address within that channel you were on.', inline=False)
         embed.add_field(name='kick', value='Kicks a member on the server.', inline=False)
         embed.add_field(name='ban', value='Bans a member on the server', inline=False)
         embed.add_field(name='purge', value='Clears messages with a certain amount.', inline=False)
