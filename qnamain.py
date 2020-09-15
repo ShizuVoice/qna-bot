@@ -1,4 +1,4 @@
-# QnA Bot Version 1.0.0 Stable by SilentVOEZ#2523
+# QnA Bot Version 1.0.1 Stable by SilentVOEZ#2523
 
 import discord, datetime, time
 import os
