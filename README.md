@@ -123,11 +123,11 @@ replacing `q!` with anything followed by a special character like `q.`, `n&`, `a
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
 
 **General Commands**
+- `hello` - Respond with "Hello!" when the bot is online.
 - `ping` - Respond with "Pong!" and latency time.
 - `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`**
-- `uptime` - Shows how long the bot has been up for.
-- `monitor` - Shows the system usage where the bot is running on.
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
+- `status` - Shows the status of the computer where the bot is running on.
 - `version` - Shows the bot version.
 
 **Fun**
@@ -141,6 +141,7 @@ These are the commands that you can use to interact with the bot. You can also l
 - `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
 
 **Moderation/Utility (Administrator/Owner only)**
+- `pas` - Make a public address within that channel you were on.
 - `kick` - Kicks a member on the server. - **Usage: `q!kick <user> <reason>`, `q!kick @VOID Being negative to the chat.`**
 - `ban` - Bans a member on the server. - **Usage: `q!ban <user> <reason>`, `q!ban @VOID Sent an NSFW picture on #general.`**
 - `purge` - Clears messages with a certain amount. - **Usage: `q!purge <amount>`, `q!purge 25`**
