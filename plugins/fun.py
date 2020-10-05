@@ -95,7 +95,8 @@ class Fun(commands.Cog):
                     'https://www.youtube.com/watch?v=R9dLe4vOfz8',
                     'https://www.youtube.com/watch?v=D1t0NsYy4mI',
                     'https://www.youtube.com/watch?v=FAQQUMcRj_Q',
-                    'https://www.youtube.com/watch?v=B5KoNaDvfmc']
+                    'https://www.youtube.com/watch?v=B5KoNaDvfmc',
+                    'https://www.youtube.com/watch?v=A_DQiVAJrrc']
         await ctx.send(f'{random.choice(responses)}')
 
 def setup(bot):

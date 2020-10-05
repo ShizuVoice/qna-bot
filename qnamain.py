@@ -1,4 +1,4 @@
-# QnA Bot Version 1.0.1 Stable by SilentVOEZ#2523
+# QnA Bot Version 1.1.0 Stable by SilentVOEZ#2523
 
 import discord, datetime, time
 import os
@@ -31,7 +31,7 @@ async def on_ready():
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
     activity = discord.Game(name=f"{prefix}help | Stable version", type=3)
-    await bot.change_presence(status=discord.Status.idle, activity=activity)
+    await bot.change_presence(status=discord.Status.online, activity=activity)
 
 # Extension commands/code I borrowed from DaijobuDes
 @bot.command()

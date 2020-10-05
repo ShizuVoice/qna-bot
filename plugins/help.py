@@ -60,7 +60,6 @@ class Help(commands.Cog):
         embed.add_field(name='kick', value='Kicks a member on the server.', inline=False)
         embed.add_field(name='ban', value='Bans a member on the server', inline=False)
         embed.add_field(name='purge', value='Clears messages with a certain amount.', inline=False)
-        embed.add_field(name='status', value="Set the bot's online status.", inline=False)
 
         await author.send(embed=embed)
 
@@ -77,6 +76,8 @@ class Help(commands.Cog):
         embed.add_field(name='load', value='Loads the cog inside the `plugins` folder', inline=False)
         embed.add_field(name='unload', value='Unloads the cog inside the `plugins` folder', inline=False)
         embed.add_field(name='reload', value='Reloads the cog inside the `plugins` folder.', inline=False)
+        embed.add_field(name='loadall', value='Loads all the cogs inside the `plugins` folder.', inline=False)
+        embed.add_field(name='unloadall', value='Unloads all the cogs inside the `plugins` folder.', inline=False)
         embed.add_field(name='shutdown', value='Shuts down the bot outside the terminal.', inline=False)
 
         await author.send(embed=embed)
