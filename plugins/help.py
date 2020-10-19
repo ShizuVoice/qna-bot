@@ -19,13 +19,25 @@ class Help(commands.Cog):
             colour = discord.Colour.dark_red()
         )
 
+        embed.set_author(name='Testpaper')
+        embed.add_field(name='tphelp', value='Shows the testpaper help.')
+        embed.add_field(name='testpaper', value='Sends the test question as a Direct Message.', inline=False)
+
+        await author.send(embed=embed)
+
+        embed = discord.Embed(
+            colour = discord.Colour.dark_red()
+        )
+
         embed.set_author(name='General Help')
         embed.add_field(name='hello', value='Respond with "Hello!" when bot is online.', inline=False)
         embed.add_field(name='ping', value='Respond with "Pong!" and latency time.', inline=False)
         embed.add_field(name='say', value='Make the bot say with your response.', inline=False)
-        embed.add_field(name='userinfo', value='Shows info of a mentioned user or yourself.')
+        embed.add_field(name='userinfo', value='Shows info of a mentioned user or yourself.', inline=False)
+        embed.add_field(name='avatar', value="Shows you the full size of the user's profile picture.", inline=False)
         embed.add_field(name='status', value="Shows the status of the computer where the bot is running on", inline=False)
         embed.add_field(name='version', value='Shows the bot version.', inline=False)
+        embed.add_field(name='about', value='Shows the about dialog of the bot.', inline=False)
 
         await author.send(embed=embed)
 
@@ -38,16 +50,6 @@ class Help(commands.Cog):
         embed.add_field(name='eightball', value='Ask the eightball for question.', inline=False)
         embed.add_field(name='eightballfil', value='Magtanong kay eightball ng isang katanungan.', inline=False)
         embed.add_field(name='haachama', value='Have some cooking tips from Akai Haato.', inline=False)
-
-        await author.send(embed=embed)
-
-        embed = discord.Embed(
-            colour = discord.Colour.dark_red()
-        )
-
-        embed.set_author(name='Testpaper')
-        embed.add_field(name='tphelp', value='Shows the testpaper help.')
-        embed.add_field(name='testpaper', value='Sends the test question as a Direct Message.', inline=False)
 
         await author.send(embed=embed)
 

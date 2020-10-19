@@ -59,6 +59,7 @@ async def unload(ctx, extension):
         print(f"{consoletime} [WARNING] Failed to unload {extension}. Extension does not exist or it's been already unloaded.")
         await ctx.send(f"Failed to unload **{extension}**. Extension does not exist or it's been already unloaded.")
         raise e
+    
 @bot.command()
 @commands.is_owner()
 async def reload(ctx, extension):
