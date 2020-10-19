@@ -122,23 +122,25 @@ replacing `q!` with anything followed by a special character like `q.`, `n&`, `a
 ### The commands
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
 
+**Testpaper**
+- `tphelp` - Shows the testpaper help.
+- `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
+
 **General Commands**
 - `hello` - Respond with "Hello!" when the bot is online.
 - `ping` - Respond with "Pong!" and latency time.
 - `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`**
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
+- `avatar` - Shows you the full size of the user's profile picture. - **Usage: `q!avatar` or `q!avatar @SilentVOEZ#2523`**
 - `status` - Shows the status of the computer where the bot is running on.
 - `version` - Shows the bot version.
+- `about` - Shows the about dialog of the bot.
 
 **Fun**
 - `rps` - Play rock, paper, scissors! - **Usage: `q!rps rock`**
 - `eightball` - Ask the eightball for question. - **Usage: `q!eightball Will I get a tasty food later?`**
 - `eightballfil` - Magtanong kay eightball ng isang katanungan. **Usage: `q!eightballfil Magkaroon ba ako ng matamis na pagkain mamaya?`**
 - `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tip)
-
-**Testpaper**
-- `tphelp` - Shows the testpaper help.
-- `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
 
 **Moderation/Utility (Administrator/Owner only)**
 - `pas` - Make a public address within that channel you were on.
