@@ -1,4 +1,4 @@
->>> **In progress - Debugging Stage**
+>>> **Subjects**
 
 `q!testpaper english` - Begin the test for the subject English.
 `q!testpaper math` - Begin the test for the subject Math.

@@ -22,11 +22,12 @@ class General(commands.Cog):
     
     @commands.command()
     async def version(self, ctx):
-        BOTVERSION = '0.9.4 Pre-release Final Debug'
-        DPYVERSION = discord.__version__
-        PYVERSIONMAJ = sys.version_info.major
-        PYVERSIONMIN = sys.version_info.minor
-        PYVERSIONMIC = sys.version_info.micro
+        # Change the bot's version on this part
+        BotV = '1.1.0 Stable'
+        DpyV = discord.__version__
+        PyVMaj = sys.version_info.major
+        PyVMin = sys.version_info.minor
+        PyVMic = sys.version_info.micro
 
         avatar = self.bot.user.avatar_url
         embed = discord.Embed(
@@ -37,9 +38,9 @@ class General(commands.Cog):
         embed.set_thumbnail(url=avatar)
         embed.set_footer(text='Bot by SilentVOEZ')
 
-        embed.add_field(name='Version', value=BOTVERSION, inline=False)
-        embed.add_field(name='Discord.py Version', value=DPYVERSION, inline=False)
-        embed.add_field(name='Python Version', value=(f'{PYVERSIONMAJ}.{PYVERSIONMIN}.{PYVERSIONMIC}'), inline=False)
+        embed.add_field(name='Version', value=BotV, inline=False)
+        embed.add_field(name='Discord.py Version', value=DpyV, inline=False)
+        embed.add_field(name='Python Version', value=(f'{PyVMaj}.{PyVMin}.{PyVMic}'), inline=False)
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -55,14 +56,13 @@ class General(commands.Cog):
 
         roles = [role for role in member.roles]
 
-        embed = discord.Embed(colour=member.color, timestamp=ctx.message.created_at)
+        embed = discord.Embed(colour=member.color)
 
         embed.set_author(name=f'User Info - {member}')
         embed.set_thumbnail(url=member.avatar_url)
-        embed.set_footer(text=f'Requested by {ctx.author}', icon_url=ctx.author.avatar_url)
+        embed.set_footer(text=f'ID: {member.id}')
 
-        embed.add_field(name='ID:', value=member.id)
-        embed.add_field(name='Guild name:', value=member.display_name)
+        embed.add_field(name='Server name:', value=member.display_name)
 
         embed.add_field(name='Created at:', value=member.created_at.strftime("%a, %#d %B %Y, %I:%M %p UTC"))
         embed.add_field(name='Joined at:', value=member.joined_at.strftime("%a, %#d %B %Y, %I:%M %p UTC"))
@@ -73,6 +73,20 @@ class General(commands.Cog):
         embed.add_field(name='Bot?', value=member.bot)
 
         await ctx.send(embed=embed)
+
+    @commands.command()
+    async def avatar(self, ctx, member: discord.Member = None):
+            member = ctx.author if not member else member
+
+            embed = discord.Embed(
+                title = f'{member}',
+                colour = discord.Colour.blurple()
+            )
+
+            embed.add_field(name='Avatar URL', value=f'{member.avatar_url}', inline=False)
+            embed.set_image(url=member.avatar_url)
+
+            await ctx.send(embed=embed)
 
 # Dedicated error handling for this command
     @say.error

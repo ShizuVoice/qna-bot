@@ -1,4 +1,7 @@
 # QnA Bot
+
+[![CodeFactor](https://www.codefactor.io/repository/github/silentvoez/qna-bot/badge)](https://www.codefactor.io/repository/github/silentvoez/qna-bot)
+
 A Discord bot that is used for online class that sends question or test paper to students.
  
 The true purpose of this bot is to use for schools that doesn't have a website infrastructure. The bot will use
@@ -16,6 +19,9 @@ The true purpose of this bot is to use for schools that doesn't have a website i
   * [Using the bot](#using-the-bot)
     + [The commands](#the-commands)
     + [Using the bot as a test paper](#using-the-bot-as-a-test-paper)
+  * [Some Notes](#some-notes)
+    + [Credits](#credits)
+    + [Extras](#extras)
 
 
 ## Setting it up
@@ -74,7 +80,7 @@ token to use with the program.
 
 When you are in the Bot section, click "Copy" below the "Click to Reveal Token" and to go the root folder of qna-bot. When you are in the root
 folder of qna-bot, open `token.txt` and then clear the content of it and then paste the token and save it.
-*Be warned that when someone saw your bot token, they can use your bot without your control! When in doubt, go to the Bot section of the
+*Be warned that when someone saw your bot token, they can use your bot account without your control! When in doubt, go to the Bot section of the
 [developers](https://discord.com/developers) page, click "Regenerate" and then "Copy" and then paste the token in the `token.txt`*
 
 After that, you just have to open `qnamain.py` and you a console window will appear. Or you can run it on Command Prompt by navigating to
@@ -116,13 +122,19 @@ replacing `q!` with anything followed by a special character like `q.`, `n&`, `a
 ### The commands
 These are the commands that you can use to interact with the bot. You can also look up the commands by typing `q!help` while the bot is online.
 
+**Testpaper**
+- `tphelp` - Shows the testpaper help.
+- `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
+
 **General Commands**
+- `hello` - Respond with "Hello!" when the bot is online.
 - `ping` - Respond with "Pong!" and latency time.
 - `say` - Make the bot say with your response. - **Usage: `q!say Hello world!`**
-- `uptime` - Shows how long the bot has been up for.
-- `monitor` - Shows the system usage where the bot is running on.
 - `userinfo` - Shows info of a mentioned user or yourself. - **Usage: `q!userinfo @SilentVOEZ`**
+- `avatar` - Shows you the full size of the user's profile picture. - **Usage: `q!avatar` or `q!avatar @SilentVOEZ#2523`**
+- `status` - Shows the status of the computer where the bot is running on.
 - `version` - Shows the bot version.
+- `about` - Shows the about dialog of the bot.
 
 **Fun**
 - `rps` - Play rock, paper, scissors! - **Usage: `q!rps rock`**
@@ -130,11 +142,8 @@ These are the commands that you can use to interact with the bot. You can also l
 - `eightballfil` - Magtanong kay eightball ng isang katanungan. **Usage: `q!eightballfil Magkaroon ba ako ng matamis na pagkain mamaya?`**
 - `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tip)
 
-**Testpaper**
-- `tphelp` - Shows the testpaper help.
-- `testpaper` - Sends the test question as a Direct Message - **Usage: `q!testpaper <subject>`, `q!testpaper science`**
-
 **Moderation/Utility (Administrator/Owner only)**
+- `pas` - Make a public address within that channel you were on.
 - `kick` - Kicks a member on the server. - **Usage: `q!kick <user> <reason>`, `q!kick @VOID Being negative to the chat.`**
 - `ban` - Bans a member on the server. - **Usage: `q!ban <user> <reason>`, `q!ban @VOID Sent an NSFW picture on #general.`**
 - `purge` - Clears messages with a certain amount. - **Usage: `q!purge <amount>`, `q!purge 25`**
@@ -248,3 +257,14 @@ After you edit the {subject}.txt and saved it inside `testpaper`, you can now go
 prepared for the quiz.
 
 And after the quiz, you can make another text file for the next topic and then overwriting/deleting the old text file inside `testpaper`.
+
+## Some Notes
+
+### Credits
+
+Thanks to [DaijobuDes](https://www.github.com/daijobudes) and to the community on Stackoverflow for helping me out on making this bot possible.
+
+### Extras
+
+If you want to help out make the bot even better, consider reading the documentation of [discord.py](https://discordpy.readthedocs.io/en/latest/) and do a
+pull request to this GitHub page.

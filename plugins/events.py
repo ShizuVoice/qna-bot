@@ -18,13 +18,6 @@ class Events(commands.Cog):
         consoletime = datetime.datetime.now()
         print(f"{consoletime} [INFO] {self.bot.user.name} successfully connected.")
 
-# Planning to use for logging but it never worked out easily at this moment
-# Logging both terminal and file would be cool tho but Python said "nope"...
-#    @commands.Cog.listener()
-#    async def on_message(self, message):
-#        consoletime = datetime.datetime.now()
-#        print(f"{consoletime} [MESSAGE] '{message.author}' said '{message.content}'")
-
     @commands.Cog.listener()
     async def on_message(self, message):
         consoletime = datetime.datetime.now()

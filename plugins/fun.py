@@ -15,9 +15,12 @@ class Fun(commands.Cog):
         consoletime = datetime.datetime.now()
         responses = ["rock!",
                     "paper!",
-                    "scissor!",]
-        await ctx.send("It's a " + f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw}.")
+                    "scissor!"]
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send("It's a " + f'{responsebuffer}')
+        print(f"{consoletime} [INFO] RPS triggered. '{ctx.author}' drawed {draw}. Bot drawed {responsebuffer}")
 
     @commands.command()
     async def eightball(self, ctx, *, question):
@@ -42,8 +45,11 @@ class Fun(commands.Cog):
                     "My sources say no.",
                     "Outlook not so good.",
                     "Very doubtful."]
-        await ctx.send(f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] Eightball triggered. Question: `{question}`")
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send(f'{responsebuffer}')
+        print(f"{consoletime} [INFO] Eightball triggered. Question: '{question}' Answer: '{responsebuffer}'")
 
     @commands.command()
     async def eightballfil(self, ctx, *, question):
@@ -66,8 +72,11 @@ class Fun(commands.Cog):
                     "Hindi.",
                     "Medyo hindi maganda.",
                     "Napaka duda."]
-        await ctx.send(f'{random.choice(responses)}')
-        print(f"{consoletime} [INFO] Eightballfil triggered. Question: `{question}`")
+
+        responsebuffer = random.choice(responses)
+
+        await ctx.send(f'{responsebuffer}')
+        print(f"{consoletime} [INFO] Eightballfil triggered. Question: '{question}' Answer: '{responsebuffer}'")
 
     @commands.command()
     async def haachama(self, ctx):
@@ -86,7 +95,8 @@ class Fun(commands.Cog):
                     'https://www.youtube.com/watch?v=R9dLe4vOfz8',
                     'https://www.youtube.com/watch?v=D1t0NsYy4mI',
                     'https://www.youtube.com/watch?v=FAQQUMcRj_Q',
-                    'https://www.youtube.com/watch?v=B5KoNaDvfmc']
+                    'https://www.youtube.com/watch?v=B5KoNaDvfmc',
+                    'https://www.youtube.com/watch?v=A_DQiVAJrrc']
         await ctx.send(f'{random.choice(responses)}')
 
 def setup(bot):

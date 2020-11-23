@@ -1,17 +1,41 @@
 # QnA Bot by SilentVOEZ#2523
 # plugins (QnA Bot Py Extension)
 
-import discord, datetime
-from discord.ext import commands
+import discord, datetime, time
 import psutil
+from discord.ext import commands
+
+start_time = time.time()
 
 class Utility(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
 
+# Status Cycle
     @commands.command()
-    async def monitor(self, ctx):
+    @commands.is_owner()
+    async def online(self, ctx, *, cactivity = ""):
+        await self.bot.change_presence(status=discord.Status.online, activity=discord.Game(name=f'{cactivity}', type=3))
+
+    @commands.command()
+    @commands.is_owner()
+    async def idle(self, ctx, *, cactivity = ""):
+        await self.bot.change_presence(status=discord.Status.idle, activity=discord.Game(name=f'{cactivity}', type=3))
+
+    @commands.command()
+    @commands.is_owner()
+    async def dnd(self, ctx, *, cactivity = ""):
+        await self.bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name=f'{cactivity}', type=3))
+
+# Utility
+    @commands.command(pass_context=True)
+    async def status(self, ctx):
+        # Time
+        current_time = time.time()
+        difference = int(round(current_time - start_time))
+        utime = str(datetime.timedelta(seconds=difference))
+
         embed = discord.Embed(
             colour = discord.Colour.green()
         )
@@ -38,24 +62,15 @@ class Utility(commands.Cog):
             os = 'Windows'
         else:
             os = 'Unknown'
-
         embed.set_author(name='System Monitor')
         embed.add_field(name="CPU Usage", value=f'{psutil.cpu_percent()}%', inline=True)
         embed.add_field(name="CPU Cores", value=psutil.cpu_count(), inline=True)
         embed.add_field(name="RAM Usage", value=f'{round(usedmem)}/{round(tmem)}MB ({round(pmem)}%)', inline=True)
         # embed.add_field(name="Swap Usage", value=f'{round(uswap)}/{round(tswap)}MB ({round(pmem)}%)', inline=True)
+        embed.add_field(name="Uptime", value=f'{utime}', inline=True)
         embed.add_field(name="Operating System", value=os, inline=True)
-
+        embed.set_footer(text="Bot by SilentVOEZ")
         await ctx.send(embed=embed)
-
-    @commands.command()
-    @commands.is_owner()
-    async def shutdown(self, ctx):
-        consoletime = datetime.datetime.now()
-        await ctx.send('Shutting down')
-        await ctx.bot.logout()
-        print(f"Bot closed at {consoletime}")
-
 
 def setup(bot):
     bot.add_cog(Utility(bot))

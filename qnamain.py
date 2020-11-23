@@ -1,8 +1,9 @@
-# QnA Bot Version 0.9.4 Pre-release Final Debug by SilentVOEZ#2523
+# QnA Bot Version 1.1.0 Stable by SilentVOEZ#2523
 
 import discord, datetime, time
 import os
 import sys
+import psutil
 
 import asyncio
 from discord.ext import commands
@@ -29,41 +30,10 @@ async def on_ready():
     print(f'----------------')
     print(f'Ensure that the bot has adequate permission to prevent errors while in use.')
     print(f'----------------')
-    activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
-    await bot.change_presence(status=discord.Status.idle, activity=activity)
+    activity = discord.Game(name=f"{prefix}help | Stable version", type=3)
+    await bot.change_presence(status=discord.Status.online, activity=activity)
 
-# Uptime command
-@bot.command(pass_context=True)
-async def uptime(ctx):
-    current_time = time.time()
-    difference = int(round(current_time - start_time))
-    text = str(datetime.timedelta(seconds=difference))
-    embed = discord.Embed(colour=ctx.message.author.top_role.colour)
-    embed.add_field(name="Uptime", value=text)
-    embed.set_footer(text="Bot by SilentVOEZ")
-    try:
-        await ctx.send(embed=embed)
-    except discord.HTTPException:
-        await ctx.send("Current uptime: " + text)
-
-
-# Status Cycle (TY DaijobuDes)
-@bot.command()
-@commands.is_owner()
-async def status(ctx, status: str):
-    status.lower()
-    prefix = open('./prefix.txt','r').read()
-    activity = discord.Game(name=f"{prefix}help, PR Final Debugging", type=3)
-    if status == 'online':
-        await bot.change_presence(status=discord.Status.online, activity=activity)
-    elif status == 'idle':
-        await bot.change_presence(status=discord.Status.idle, activity=activity)
-    elif status == 'dnd' or status == 'donotdisturb':
-        await bot.change_presence(status=discord.Status.dnd, activity=activity)
-    else:
-        await ctx.send(f'"{status}" is not a valid argument.')
-
-# A bit of code borrowed from DaijobuDes
+# Extension commands/code I borrowed from DaijobuDes
 @bot.command()
 @commands.is_owner()
 async def load(ctx, extension):
@@ -89,6 +59,7 @@ async def unload(ctx, extension):
         print(f"{consoletime} [WARNING] Failed to unload {extension}. Extension does not exist or it's been already unloaded.")
         await ctx.send(f"Failed to unload **{extension}**. Extension does not exist or it's been already unloaded.")
         raise e
+    
 @bot.command()
 @commands.is_owner()
 async def reload(ctx, extension):
@@ -102,6 +73,39 @@ async def reload(ctx, extension):
         print(f"{consoletime} [WARNING] Failed to reload {extension}. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
         await ctx.send(f"Failed to reload **{extension}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
         raise e
+
+@bot.command()
+@commands.is_owner()
+async def loadall(ctx):
+    for filename in os.listdir('./plugins'):
+        consoletime = datetime.datetime.now()
+        if filename.endswith('.py'):
+            try:
+                bot.load_extension(f'plugins.{filename[:-3]}')
+                await ctx.send(f"**{filename}** extensions loaded.")
+                print(f'{consoletime} [INFO] {filename} loaded')
+            except Exception as e:
+                await ctx.send(f"Failed to reload **{filename}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
+                print(f"{consoletime} [WARNING] Failed to load {filename}. Please check the extension's code or extension does not exist.")
+                raise e
+
+@bot.command()
+@commands.is_owner()
+async def unloadall(ctx):
+    for filename in os.listdir('./plugins'):
+        consoletime = datetime.datetime.now()
+        if filename.endswith('.py'):
+            bot.unload_extension(f'plugins.{filename[:-3]}')
+            await ctx.send(f"**{filename}** unloaded")
+            print(f'{consoletime} [INFO] {filename} extension unloaded.')
+
+@bot.command()
+@commands.is_owner()
+async def shutdown(ctx):
+    consoletime = datetime.datetime.now()
+    await ctx.send('Shutting down')
+    await ctx.bot.logout()
+    print(f"Bot closed at {consoletime}")
 
 for filename in os.listdir('./plugins'):
     consoletime = datetime.datetime.now()

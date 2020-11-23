@@ -29,13 +29,14 @@ class Mod(commands.Cog):
 
     @commands.command()
     @commands.has_permissions(administrator=True)
-    async def purge(self, ctx, limit=50, member: discord.Member=None):
+    async def purge(self, ctx, limit = None, member: discord.Member = None):
+        consoletime = datetime.datetime.now()
         await ctx.message.delete()
         msg = []
         try:
             limit = int(limit)
         except:
-            return await ctx.send("Please pass in an integer as limit")
+            return await ctx.send("Please add a number!")
         if not member:
             await ctx.channel.purge(limit=limit)
             return await ctx.send(f"Purged {limit} messages", delete_after=5)
@@ -44,20 +45,20 @@ class Mod(commands.Cog):
                 break
             if m.author == member:
                 msg.append(m)
-        await ctx.channel.delete_messages(msg)
         await ctx.send(f"Purged {limit} messages of {member.mention}", delete_after=5)
+        print(f'{consoletime} [INFO] Purged {limit} messages on a channel or by member.')
 
     @commands.command()
-    @commands.has_permissions(administrator=True)
-    async def psa(self, ctx, *, arg):
+    @commands.has_permissions(kick_members=True)
+    async def pas(self, ctx, *, arg):
         consoletime = datetime.datetime.now()
         embed = discord.Embed(colour = discord.Colour.darker_grey())
         
-        embed.add_field(name='Public Announcement', value=(f'{arg}'))
+        embed.add_field(name='Public Address System', value=(f'{arg}'))
 
         await ctx.send(embed=embed)
         await ctx.message.delete()
-        print(f"{consoletime} [INFO] PSA triggered! It's said: '{arg}'")
+        print(f"{consoletime} [INFO] PAS triggered! It's said: '{arg}'")
 
 
 # Dedicated error handling for this commands

@@ -29,7 +29,7 @@ class Testpaper(commands.Cog):
 
 #        paper = open(f"./testpaper/{subject}.txt","r").read()
         print(f"{consoletime} [INFO] Testpaper triggered by '{ctx.author}' with a subject '{subject}'.")
-        await ctx.send(f"Good luck taking the test!")
+        await ctx.send(f"I'm sending the paper through direct message. Good luck taking the test!")
         await ctx.author.send(testpaper)
         paper.close()
 
