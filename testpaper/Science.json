@@ -1,0 +1,52 @@
+{
+    "school": "Akihabara High School",
+    "subject": "Science",
+    "directions": "Choose your answer on the list and send it to your subject teacher through direct message.",
+    "questions": {
+        "1": {
+            "ask": "Anything that occupies space and has mass.",
+            "choices": {
+                "A": "Object",
+                "B": "Matter",
+                "C": "Things",
+                "D": "String"
+            }
+        },
+        "2": {
+            "ask": "Aside from the three common state of matter, what do you call the fourth kind of matter?",
+            "choices": {
+                "A": "Solid",
+                "B": "Gas",
+                "C": "Plasma",
+                "D": "Liquid"
+            }
+        },
+        "3": {
+            "ask": "This state of matter where molecules are closely packed together.",
+            "choices": {
+                "A": "Solid",
+                "B": "Gas",
+                "C": "Plasma",
+                "D": "Liquid"
+            }
+        },
+        "4": {
+            "ask": "This state of matter has definite volume but no fixed shape.",
+            "choices": {
+                "A": "Solid",
+                "B": "Gas",
+                "C": "Plasma",
+                "D": "Liquid"
+            }
+        },
+        "5": {
+            "ask": "This state of matter has no fixed shape and no fixed volume.",
+            "choices": {
+                "A": "Solid",
+                "B": "Gas",
+                "C": "Plasma",
+                "D": "Liquid"
+            }
+        }
+    }
+}

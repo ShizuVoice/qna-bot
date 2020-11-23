@@ -1,0 +1,61 @@
+{
+    "school": "Akihabara Elementary",
+    "subject": "English",
+    "directions": "Choose your answer on the list and send it to your subject teacher through direct message.",
+    "questions": {
+        "1": {
+            "ask": "A word that refers to a person, place, things, objects.",
+            "choices": {
+                "A": "Pronoun",
+                "B": "Noun",
+                "C": "Adverb",
+                "D": "Adjective"
+            }
+        },
+        "2": {
+            "ask": "A word that substitute a noun.",
+            "choices": {
+                "A": "Pronoun",
+                "B": "Noun",
+                "C": "Adverb",
+                "D": "Adjective"
+            }
+        },
+        "3": {
+            "ask": "A word that describes a noun.",
+            "choices": {
+                "A": "Pronoun",
+                "B": "Noun",
+                "C": "Adverb",
+                "D": "Adjective"
+            }
+        },
+        "4": {
+            "ask": "A word that describes a verb.",
+            "choices": {
+                "A": "Pronoun",
+                "B": "Noun",
+                "C": "Adverb",
+                "D": "Adjective"
+            }
+        },
+        "5": {
+            "ask": "If two words have the same meaning, it is called?",
+            "choices": {
+                "A": "Morpheme",
+                "B": "Antonym",
+                "C": "Synonym",
+                "D": "None of the above"
+            }
+        },
+        "6": {
+            "ask": "If two words have opposite meaning, it is called?",
+            "choices": {
+                "A": "Morpheme",
+                "B": "Antonym",
+                "C": "Synonym",
+                "D": "None of the above"
+            }
+        }
+    }
+}
