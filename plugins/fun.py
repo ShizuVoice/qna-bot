@@ -27,7 +27,7 @@ class Fun(commands.Cog):
         consoletime = datetime.datetime.now()
         responses = ["It is certain.",
                     "It is decidedly so.",
-                    "Without a doubt.",
+ #                   "Without a doubt.",
                     "Yes - definitely.",
                     "You may rely on it.",
                     "As I see it, yes.",
@@ -40,11 +40,11 @@ class Fun(commands.Cog):
                     "Better not tell you now.",
                     "Cannot predict now.",
                     "Concentrate and ask again.",
-                    "Don't count on it.",
+#                    "Don't count on it.",
                     "My reply is no.",
                     "My sources say no.",
-                    "Outlook not so good.",
-                    "Very doubtful."]
+                    "Outlook not so good."]
+#                    "Very doubtful."]
 
         responsebuffer = random.choice(responses)
 
@@ -56,7 +56,7 @@ class Fun(commands.Cog):
         consoletime = datetime.datetime.now()
         responses = ["Panigurado.",
                     "Napagpasyahan ito.",
-                    "Walang duda.",
+#                    "Walang duda.",
                     "Oo - sigurado.",
                     "Maaari kang umasa dito.",
                     "Sa nakikita ko, oo.",
@@ -96,7 +96,8 @@ class Fun(commands.Cog):
                     'https://www.youtube.com/watch?v=D1t0NsYy4mI',
                     'https://www.youtube.com/watch?v=FAQQUMcRj_Q',
                     'https://www.youtube.com/watch?v=B5KoNaDvfmc',
-                    'https://www.youtube.com/watch?v=A_DQiVAJrrc']
+                    'https://www.youtube.com/watch?v=A_DQiVAJrrc',
+                    'https://www.youtube.com/watch?v=TlAi_TVzO9E']
         await ctx.send(f'{random.choice(responses)}')
 
 def setup(bot):
