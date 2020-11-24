@@ -102,13 +102,13 @@ class Fun(commands.Cog):
 
     @commands.command()
     async def choose(self, ctx, choice1: commands.clean_content, choice2: commands.clean_content):
-        consoletime - datetime.datetime.now()
+        consoletime = datetime.datetime.now()
         responses = [f'{choice1}',
                      f'{choice2}']
             
         responsebuffer = random.choice(responses)
             
-        print(f"{consoletime} [INFO] Choose triggered. {ctx.author} questioned: '{choice1} or {choice2}' Answer: '{responsebuffer}'"
+        print(f"{consoletime} [INFO] Choose triggered. {ctx.author} questioned: '{choice1} or {choice2}' Answer: '{responsebuffer}'")
         await ctx.send(f'{responsebuffer}')
         
 def setup(bot):
