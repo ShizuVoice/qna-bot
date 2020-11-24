@@ -23,7 +23,7 @@ class General(commands.Cog):
     @commands.command()
     async def version(self, ctx):
         # Change the bot's version on this part
-        BotV = '1.1.0 Stable'
+        BotV = '1.2.0 Beta'
         DpyV = discord.__version__
         PyVMaj = sys.version_info.major
         PyVMin = sys.version_info.minor
