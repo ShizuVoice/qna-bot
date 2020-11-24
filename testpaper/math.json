@@ -1,0 +1,52 @@
+{
+    "school": "Akihabara Elementary",
+    "subject": "math",
+    "directions": "Choose your answer on the list and send it to your subject teacher through direct message.",
+    "questions": {
+        "1": {
+            "ask": "If SilentVOEZ has 6 apples and QnA Bot has 4 apples and you add up together, how many apples were in total?",
+            "choices": {
+                "A": "8",
+                "B": "10",
+                "C": "9",
+                "D": "11"
+            }
+        },
+        "2": {
+            "ask": "QnA Bot has 18 apples, SilentVOEZ ate 5 apples. How apples were left?",
+            "choices": {
+                "A": "13",
+                "B": "14",
+                "C": "12",
+                "D": "10"
+            }
+        },
+        "3": {
+            "ask": "Mr. Admin divided the 12 oranges into 3. How many group of oranges were in total?",
+            "choices": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4"
+            }
+        },
+        "4": {
+            "ask": "Rushia has 6 cutting board on her kitchen, Noel took 4 cutting board. How many cutting board were left?",
+            "choices": {
+                "A": "5",
+                "B": "3",
+                "C": "2",
+                "D": "1"
+            }
+        },
+        "5": {
+            "ask": "Korone bought 25 gummy fingers from a candy store. She gave Okayu 7 gummy fingers, 5 for Fubuki, and 6 for Mio. How many gummy fingers does Korone have?",
+            "choices": {
+                "A": "8",
+                "B": "7",
+                "C": "9",
+                "D": "6"
+            }
+        }
+    }
+}
