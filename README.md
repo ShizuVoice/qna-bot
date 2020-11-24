@@ -141,6 +141,7 @@ These are the commands that you can use to interact with the bot. You can also l
 - `eightball` - Ask the eightball for question. - **Usage: `q!eightball Will I get a tasty food later?`**
 - `eightballfil` - Magtanong kay eightball ng isang katanungan. **Usage: `q!eightballfil Magkaroon ba ako ng matamis na pagkain mamaya?`**
 - `haachama` - Have some cooking tips from Akai Haato. (p.s. It's not a legit cooking tip)
+- `choose` - Makes the bot choose two choices. - **Usage: `q!choose "choice 1" "choice 2"`**
 
 **Moderation/Utility (Administrator/Owner only)**
 - `pas` - Make a public address within that channel you were on.
@@ -151,6 +152,9 @@ These are the commands that you can use to interact with the bot. You can also l
 - `shutdown` - Shuts down the bot outside the terminal.
 
 ### Using the bot as a test paper
+Thanks to [DaijobuDes](https://www.github.com/daijobudes) for contributing to the development of the bot, I will make a different guide after
+verifying the whole process of the testpaper command.
+
 **Soon™**
 
 ## Some Notes
