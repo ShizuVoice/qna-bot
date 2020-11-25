@@ -50,6 +50,7 @@ class Help(commands.Cog):
         embed.add_field(name='eightball', value='Ask the eightball for question.', inline=False)
         embed.add_field(name='eightballfil', value='Magtanong kay eightball ng isang katanungan.', inline=False)
         embed.add_field(name='haachama', value='Have some cooking tips from Akai Haato.', inline=False)
+        embed.add_field(name='choose', value='Makes the bot choose two choices.', inline=False)
 
         await author.send(embed=embed)
 
