@@ -43,8 +43,8 @@ async def load(ctx, extension):
         print(f'{consoletime} [INFO] {extension} loaded')
         await ctx.send(f'**{extension}** loaded')
     except Exception as e:
-        print(f"{consoletime} [WARNING] Failed to load {extension}. Please check the extension's code or extension does not exist.")
-        await ctx.send(f"Failed to load **{extension}**. Please check the extension's code or extension does not exist.")
+        print(f"{consoletime} [WARNING] Failed to load extension {extension}. Please check the extension's code or extension does not exist.")
+        await ctx.send(f"Failed to load extension **{extension}**. Please check the extension's code or extension does not exist.")
         raise e
 
 @bot.command()
@@ -56,8 +56,8 @@ async def unload(ctx, extension):
         print(f'{consoletime} [INFO] {extension} unloaded')
         await ctx.send(f'**{extension}** unloaded')
     except Exception as e:
-        print(f"{consoletime} [WARNING] Failed to unload {extension}. Extension does not exist or it's been already unloaded.")
-        await ctx.send(f"Failed to unload **{extension}**. Extension does not exist or it's been already unloaded.")
+        print(f"{consoletime} [WARNING] Failed to unload extension {extension}. Extension does not exist or it's been already unloaded.")
+        await ctx.send(f"Failed to unload extension **{extension}**. Extension does not exist or it's been already unloaded.")
         raise e
     
 @bot.command()
@@ -70,8 +70,8 @@ async def reload(ctx, extension):
         print(f'{consoletime} [INFO] {extension} reloaded')
         await ctx.send(f'**{extension}** reloaded')
     except Exception as e:
-        print(f"{consoletime} [WARNING] Failed to reload {extension}. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
-        await ctx.send(f"Failed to reload **{extension}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
+        print(f"{consoletime} [WARNING] Failed to reload extension {extension}. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
+        await ctx.send(f"Failed to reload extension **{extension}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
         raise e
 
 @bot.command()
@@ -85,8 +85,8 @@ async def loadall(ctx):
                 await ctx.send(f"**{filename}** extensions loaded.")
                 print(f'{consoletime} [INFO] {filename} loaded')
             except Exception as e:
-                await ctx.send(f"Failed to reload **{filename}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
-                print(f"{consoletime} [WARNING] Failed to load {filename}. Please check the extension's code or extension does not exist.")
+                await ctx.send(f"Failed to load extension **{filename}**. Please check the extension's code or you were trying reloading an unloaded extension or non-exisiting extension.")
+                print(f"{consoletime} [WARNING] Failed to load extension {filename}. Please check the extension's code or extension does not exist.")
                 raise e
 
 @bot.command()
@@ -96,8 +96,9 @@ async def unloadall(ctx):
         consoletime = datetime.datetime.now()
         if filename.endswith('.py'):
             bot.unload_extension(f'plugins.{filename[:-3]}')
-            await ctx.send(f"**{filename}** unloaded")
-            print(f'{consoletime} [INFO] {filename} extension unloaded.')
+            await asyncio.sleep(2)
+            await ctx.send(f"Bot extension **{filename}** unloaded")
+            print(f'{consoletime} [INFO] Bot extension {filename} extension unloaded.')
 
 @bot.command()
 @commands.is_owner()
@@ -111,6 +112,6 @@ for filename in os.listdir('./plugins'):
     consoletime = datetime.datetime.now()
     if filename.endswith('.py'):
         bot.load_extension(f'plugins.{filename[:-3]}')
-        print(f'{consoletime} [INFO] {filename} loaded')
+        print(f'{consoletime} [INFO] Bot extension {filename} loaded')
 
 bot.run(TOKEN)
