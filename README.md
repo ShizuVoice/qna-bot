@@ -148,8 +148,6 @@ These are the commands that you can use to interact with the bot. You can also l
 - `kick` - Kicks a member on the server. - **Usage: `q!kick <user> <reason>`, `q!kick @VOID Being negative to the chat.`**
 - `ban` - Bans a member on the server. - **Usage: `q!ban <user> <reason>`, `q!ban @VOID Sent an NSFW picture on #general.`**
 - `purge` - Clears messages with a certain amount. - **Usage: `q!purge <amount>`, `q!purge 25`**
-- `status` - Set the bot's online status.
-- `shutdown` - Shuts down the bot outside the terminal.
 
 ### Using the bot as a test paper
 Thanks to [DaijobuDes](https://www.github.com/daijobudes) for contributing to the development of the bot, I will make a different guide after
