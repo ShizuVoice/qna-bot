@@ -80,12 +80,13 @@ token to use with the program.
 
 When you are in the Bot section, click "Copy" below the "Click to Reveal Token" and to go the root folder of qna-bot. When you are in the root
 folder of qna-bot, open `token.txt` and then clear the content of it and then paste the token and save it.
-*Be warned that when someone saw your bot token, they can use your bot account without your control! When in doubt, go to the Bot section of the
-[developers](https://discord.com/developers) page, click "Regenerate" and then "Copy" and then paste the token in the `token.txt`*
+*Be warned that when someone saw your bot token, they can use your bot account without your own control! When in doubt, go to the Bot section of the
+[developers](https://discord.com/developers) page, click "Regenerate" and then click "Copy" and then replace the content of `token.txt` by clearing
+it and pasting it*
 
-After that, you just have to open `qnamain.py` and you a console window will appear. Or you can run it on Command Prompt by navigating to
-the root directory of `qna-bot` and then typing `py qnamain.py`. For Linux users, navigate to the root folder on terminal and execute it
-by typing `python3 qnamain.py`.
+After that, in Windows you just have to open or double click `qnamain.py` and a console window will appear. Or you can run it on Command Prompt
+by navigating to the root directory of `qna-bot` and then typing `py qnamain.py`. For Linux users, navigate to the root folder on terminal and
+execute it by typing `python3 qnamain.py`.
 
 Once you get the "successfully connected" message on the console, everything is working.
 
